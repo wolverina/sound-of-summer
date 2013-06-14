@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+<locations>
+	<id>33</id>
+	<name>Brockport, NY — SUNY Brockport</name>
+	<location>350 New Campus Drive Brockport, NY 14420</location>
+	<event_id>1</event_id>
+</locations>
+<locations>
+	<id>45</id>
+	<name>Brooklyn, NY — Mom&apos;s House</name>
+	<location>1619 East 23rd Street 11229</location>
+	<event_id>1</event_id>
+</locations>
+<locations>
+	<id>46</id>
+	<name>New York, NY — Dad&apos;s House</name>
+	<location>220 East 57th Street 10022</location>
+	<event_id>1</event_id>
+</locations>
+<locations>
+	<id>47</id>
+	<name>New York, NY</name>
+	<location>280 Madison Avenue, New York, NY 10016</location>
+	<event_id>1</event_id>
+</locations>
+<locations>
+	<id>48</id>
+	<name>Brooklyn, NY — Mom&apos;s House</name>
+	<location>1619 East 23rd Street 11229</location>
+	<event_id>2</event_id>
+</locations>
+<locations>
+	<id>49</id>
+	<name>New York, NY — Dad&apos;s House</name>
+	<location>220 East 57th Street 10022</location>
+	<event_id>2</event_id>
+</locations>
+<locations>
+	<id>50</id>
+	<name>Brooklyn, NY — Old Friends</name>
+	<location>Bay Ridge, Brooklyn</location>
+	<event_id>2</event_id>
+</locations>
+<locations>
+	<id>51</id>
+	<name>Brooklyn, NY — L&apos;Amour</name>
+	<location>1545 63rd Street Brooklyn, NY 11219</location>
+	<event_id>2</event_id>
+</locations>
+<locations>
+	<id>52</id>
+	<name>Brooklyn, NY — Best Friend</name>
+	<location>albemarle road and east 4th brooklyn</location>
+	<event_id>2</event_id>
+</locations>
+<locations>
+	<id>53</id>
+	<name>Brooklyn, NY — Mom&apos;s House</name>
+	<location>1619 East 23rd Street 11229</location>
+	<event_id>3</event_id>
+</locations>
+<locations>
+	<id>55</id>
+	<name>New York, NY — Dad&apos;s House</name>
+	<location>220 East 57th Street 10022</location>
+	<event_id>3</event_id>
+</locations>
+<locations>
+	<id>56</id>
+	<name>New York, NY — Rififi</name>
+	<location>332 East 11th Street, New York, NY</location>
+	<event_id>3</event_id>
+</locations>
+<locations>
+	<id>57</id>
+	<name>New York, NY — The Gershwin Hotel</name>
+	<location>7 East 27th Street, New York, NY</location>
+	<event_id>3</event_id>
+</locations>
+<locations>
+	<id>58</id>
+	<name>New York, NY — Under St. Marks Theater</name>
+	<location>94 Saint Marks Pl, New York, NY</location>
+	<event_id>3</event_id>
+</locations>
+<locations>
+	<id>59</id>
+	<name>New York, NY</name>
+	<location>Herald Square NY</location>
+	<event_id>3</event_id>
+</locations>
+<locations>
+	<id>60</id>
+	<name>New York, NY — Dad&apos;s House</name>
+	<location>220 East 57th Street 10022</location>
+	<event_id>4</event_id>
+</locations>
+<locations>
+	<id>61</id>
+	<name>Brooklyn, NY — Mom&apos;s House</name>
+	<location>1619 East 23rd Street 11229</location>
+	<event_id>4</event_id>
+</locations>
+<locations>
+	<id>62</id>
+	<name>New York, NY — Under St. Mark&apos;s Theater</name>
+	<location>94 Saint Marks Pl, New York, NY</location>
+	<event_id>4</event_id>
+</locations>
+<locations>
+	<id>63</id>
+	<name>New York, NY — Rififi</name>
+	<location>332 East 11th Street, New York, NY</location>
+	<event_id>4</event_id>
+</locations>
+<locations>
+	<id>64</id>
+	<name>Brooklyn, NY — Boudoir Bar</name>
+	<location>271 Smith Street, New York, NY</location>
+	<event_id>4</event_id>
+</locations>
+<locations>
+	<id>66</id>
+	<name>New York, NY — Work</name>
+	<location>37 W 20th St New York, NY</location>
+	<event_id>4</event_id>
+</locations>
+<locations>
+	<id>67</id>
+	<name>Brooklyn, NY — Mom&apos;s House</name>
+	<location>1619 East 23rd Street 11229</location>
+	<event_id>5</event_id>
+</locations>
+<locations>
+	<id>68</id>
+	<name>New York, NY — Dad&apos;s House</name>
+	<location>220 East 57th Street 10022</location>
+	<event_id>5</event_id>
+</locations>
+<locations>
+	<id>69</id>
+	<name>Brooklyn, NY — Brooklyn College</name>
+	<location>2900 Bedford Ave, Brooklyn, NY 11210</location>
+	<event_id>5</event_id>
+</locations>
+<locations>
+	<id>70</id>
+	<name>New York, NY — Rififi</name>
+	<location>332 East 11th Street, New York, NY</location>
+	<event_id>5</event_id>
+</locations>
+<locations>
+	<id>71</id>
+	<name>Stony Brook, NY — SUNY Stony Brook</name>
+	<location>Campus Drive, Stony Brook, NY</location>
+	<event_id>6</event_id>
+</locations>
+<locations>
+	<id>72</id>
+	<name>Brooklyn, NY — Mom&apos;s House</name>
+	<location>1619 East 23rd Street 11229</location>
+	<event_id>6</event_id>
+</locations>
+<locations>
+	<id>73</id>
+	<name>New York, NY — Dad&apos;s House</name>
+	<location>220 East 57th Street 10022</location>
+	<event_id>6</event_id>
+</locations>
+<locations>
+	<id>74</id>
+	<name>Stony Brook, NY — SUNY Stony Brook</name>
+	<location>Campus Drive, Stony Brook, NY</location>
+	<event_id>7</event_id>
+</locations>
+<locations>
+	<id>75</id>
+	<name>East Rockaway, NY — Mom&apos;s House</name>
+	<location>9 Alden Road 11518</location>
+	<event_id>7</event_id>
+</locations>
+<locations>
+	<id>76</id>
+	<name>New York, NY — Dad&apos;s House</name>
+	<location>220 East 57th Street 10022</location>
+	<event_id>7</event_id>
+</locations>
+<locations>
+	<id>77</id>
+	<name>Jamaica Plain, MA — Boyfriend</name>
+	<location>Amory Street, Boston, MA</location>
+	<event_id>7</event_id>
+</locations>
+<locations>
+	<id>78</id>
+	<name>East Rockaway, NY — Mom&apos;s House</name>
+	<location>9 Alden Road 11518</location>
+	<event_id>8</event_id>
+</locations>
+<locations>
+	<id>79</id>
+	<name>New York, NY — Dad&apos;s House</name>
+	<location>220 East 57th Street 10022</location>
+	<event_id>8</event_id>
+</locations>
+<locations>
+	<id>80</id>
+	<name>Portland, OR — My Apartment</name>
+	<location>221 NW 5th Avenue 97209</location>
+	<event_id>9</event_id>
+</locations>
+<locations>
+	<id>81</id>
+	<name>Portland, OR — My Apartment</name>
+	<location>221 NW 5th Avenue 97209</location>
+	<event_id>10</event_id>
+</locations>
+<locations>
+	<id>82</id>
+	<name>Portland, OR — My Apartment</name>
+	<location>221 NW 5th Avenue 97209</location>
+	<event_id>11</event_id>
+</locations>
+<locations>
+	<id>83</id>
+	<name>Brooklyn, NY — Boyfriend</name>
+	<location>Windsor Terrace,  Brooklyn, NY</location>
+	<event_id>8</event_id>
+</locations>
+<locations>
+	<id>84</id>
+	<name>Portland, OR</name>
+	<location>Tom McCall Waterfront Park, Portland</location>
+	<event_id>11</event_id>
+</locations>
+<locations>
+	<id>85</id>
+	<name>Amherst, MA — UMass Amherst</name>
+	<location>University of Massachusetts Amherst Amherst, MA 01003</location>
+	<event_id>3</event_id>
+</locations>
+<locations>
+	<id>86</id>
+	<name>Brooklyn, NY — The Boardwalk</name>
+	<location>Coney Island Boardwalk W Brooklyn, NY 11224</location>
+	<event_id>5</event_id>
+</locations>
+<locations>
+	<id>87</id>
+	<name>Portland, OR — Work</name>
+	<location>805 SW Broadway, Portland, OR 97204</location>
+	<event_id>9</event_id>
+</locations>
+<locations>
+	<id>88</id>
+	<name>Portland, OR — Trivia</name>
+	<location>301 Southeast Morrison Street Portland, OR 97214 </location>
+	<event_id>9</event_id>
+</locations>
+<locations>
+	<id>89</id>
+	<name>Portland, OR — Work</name>
+	<location>805 SW Broadway, Portland, OR 97204</location>
+	<event_id>10</event_id>
+</locations>
+<locations>
+	<id>90</id>
+	<name>Portland, OR — Work</name>
+	<location>115 NW 1st Ave Portland, OR 97209</location>
+	<event_id>10</event_id>
+</locations>
+<locations>
+	<id>91</id>
+	<name>Portland, OR — Trivia</name>
+	<location>301 Southeast Morrison Street Portland, OR 97214 </location>
+	<event_id>10</event_id>
+</locations>
+<locations>
+	<id>92</id>
+	<name>Portland, OR — Boyfriend</name>
+	<location>1300 SW Park Avenue, Portland, OR</location>
+	<event_id>10</event_id>
+</locations>
+<locations>
+	<id>93</id>
+	<name>Portland, OR — Work</name>
+	<location>115 NW 1st Ave Portland, OR 97209</location>
+	<event_id>11</event_id>
+</locations>
+<locations>
+	<id>94</id>
+	<name>Portland, OR — Trivia</name>
+	<location>301 Southeast Morrison Street Portland, OR 97214 </location>
+	<event_id>11</event_id>
+</locations>
+<locations>
+	<id>95</id>
+	<name>Portland, OR — Work</name>
+	<location>1319 Southeast MLK Junior Boulevard, Portland, OR</location>
+	<event_id>12</event_id>
+</locations>
+<locations>
+	<id>96</id>
+	<name>Portland, OR — My Apartment</name>
+	<location>221 NW 5th Ave Portland OR 97209</location>
+	<event_id>12</event_id>
+</locations>
+<locations>
+	<id>97</id>
+	<name>Portland, OR — Exercise</name>
+	<location>Tom McCall Waterfront Park 97209</location>
+	<event_id>12</event_id>
+</locations>
+<locations>
+	<id>98</id>
+	<name>New York </name>
+	<location>220 East 57th Street 10022</location>
+	<event_id>12</event_id>
+</locations>
+<locations>
+	<id>99</id>
+	<name>Belfast, UK</name>
+	<location>Wellington Park Terrace, Belfast, UK</location>
+	<event_id>12</event_id>
+</locations>
+</table>

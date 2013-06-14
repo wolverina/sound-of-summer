@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table>
+<events>
+	<id>1</id>
+	<date>2001</date>
+	<description>&quot;This is one of the worst moments of my life.&quot; I got kicked out of a summer visual arts program and I felt like a ghost.</description>
+</events>
+<events>
+	<id>2</id>
+	<date>2002</date>
+	<description>&quot;This has been the best summer of my life.&quot;  A well-adjusted season of music, in-jokes and crepuscular activity.</description>
+</events>
+<events>
+	<id>3</id>
+	<date>2003</date>
+	<description>&quot;Experiencing great highs and suffering tremendous lows.&quot; Holding onto someone who wasn&apos;t holding onto me.</description>
+</events>
+<events>
+	<id>4</id>
+	<date>2004</date>
+	<description>&quot;My dad works around the corner from where I temp and he buys me lunch and I buy him dessert.&quot; Free lunches with dad.</description>
+</events>
+<events>
+	<id>5</id>
+	<date>2005</date>
+	<description>&quot;I&apos;ve had six good days since mid-May and I should have either learned to drive or done sit ups or gotten a job or learned PHP or visited Massachusetts or at least just left my house.&quot; Dropped out of college for a little while.</description>
+</events>
+<events>
+	<id>6</id>
+	<date>2006</date>
+	<description>&quot;We had a small dance party.&quot; Two other girls and I shared an apartment intended for six. Within the first three weeks we had all been jilted. Ice cream and parties ensued for three months.</description>
+</events>
+<events>
+	<id>7</id>
+	<date>2007</date>
+	<description>&quot;The professor was really impressed with me and we talked for a long time.&quot; A full year of Organic Chemistry in 10 weeks is remarkably easy when you&apos;re studying for 11 hours a day with your best friends and completely limerent over your professor.</description>
+</events>
+<events>
+	<id>8</id>
+	<date>2008</date>
+	<description>&quot;Hello. I am living through the lowest part of my 20s.&quot; I lost everything this summer.</description>
+</events>
+<events>
+	<id>9</id>
+	<date>2009</date>
+	<description>I remember nothing.</description>
+</events>
+<events>
+	<id>10</id>
+	<date>2010</date>
+	<description>I finally got around to listening to Beach House&apos;s Teen Dream the week a friend from high school died.</description>
+</events>
+<events>
+	<id>11</id>
+	<date>2011</date>
+	<description>&quot;I put up a wall. That was three years ago.&quot; I woke up.</description>
+</events>
+<events>
+	<id>12</id>
+	<date>2012</date>
+	<description>&quot;I hope the grief over that is short-lived.&quot; The grief over that WAS short lived.</description>
+</events>
+</table>
