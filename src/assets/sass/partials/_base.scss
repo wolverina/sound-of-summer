@@ -1,0 +1,119 @@
+body {
+  background-color: $color-background;
+  color: $color-body-hex;
+  color: $color-body;
+  font-family: 'proxima-nova-condensed', Helvetica, Arial, sans-serif;
+  font-size: $font-base;
+  line-height: calc-em(27px, $font-base); 
+
+  &:after {
+		content: 'base'; 
+		display: none;
+	}
+}
+
+a {
+	color: $color-body-hex;
+	color: $color-body;
+	text-decoration: none;
+	border-color: $color-body-hex;
+	border-bottom: 1px dotted $color-body;
+	padding-bottom: .2em;
+  @include transition(
+    $time-default color ease, 
+    $time-default border-color ease
+  );
+  
+	&:hover {
+		color: $color-neutral-hex;
+    color: $color-neutral;
+		border-color: $color-neutral-hex;
+		border-color: $color-neutral;
+ 	}
+
+	&:visited { 
+		color: $color-body-hex;
+		color: $color-body;
+	}
+ 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-size: 1em;
+	color: #fff;
+	margin: 0;
+}
+
+img { max-width: 100%; }
+
+dd { margin: 0 0 2*$unit-v 0; }
+
+input[type="text"] { 
+	border: 1px solid $color-neutral-lite; 
+	border-radius: 8px 0 0 8px;
+	padding: .5em .75em;
+	color: $color-body-hex;
+  color: $color-body;
+	font-family: 'proxima-nova-condensed', Helvetica, Arial, sans-serif;
+	@include transition($time-default width ease);
+	
+	&:focus { background-color: #f9f9f9; }
+}
+
+input[type='submit'], 
+.submit {
+	border-radius: 0 8px 8px 0;
+	border: 1px solid $color-neutral-lite;
+	padding: .25em .5em;
+	display: inline-block;
+	margin-left: -4px;
+	border-left: 1px solid $color-neutral-lite;
+	background-color: $color-accent;
+	color: #fff;
+	font-size: .9em;
+	font-weight: 800;
+	@include transition($time-default background-color ease)
+}
+	
+button {
+	background: transparent;
+	color: $color-neutral-hex;
+	color: $color-neutral;
+	border: none;
+	@include transition($time-default color ease);
+	
+	&:hover {
+		color: $color-body-hex;
+		color: $color-body;
+	}
+}
+
+::selection { background: rgba(20, 0, 20, 0.0976563); } 
+::-moz-selection { background: rgba(20, 0, 20, 0.0976563); }
+
+@media all and (min-width: $media-sm) {
+	body:after {
+	 	content: 'small'; 
+		display: none;
+	}
+}
+
+@media all and (min-width: $media-md) {
+	body:after {
+		content: 'medium'; 
+		display: none;
+	}
+}
+
+@media all and (min-width: $media-md) {
+  body:after {
+    content: 'large'; 
+    display: none;
+  }
+}

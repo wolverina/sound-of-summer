@@ -1,0 +1,78 @@
+/*
+Syntax error: Undefined variable: "$color-background".
+        on line 2 of /Users/chloe/Sites/sound-of-summer/src/assets/sass/partials/_base.scss
+        from line 7 of /Users/chloe/Sites/sound-of-summer/src/assets/sass/main.scss
+
+1: /Users/chloe/Sites/sound-of-summer/src/assets/sass/main.scss
+
+Backtrace:
+/Users/chloe/Sites/sound-of-summer/src/assets/sass/partials/_base.scss:2
+/Users/chloe/Sites/sound-of-summer/src/assets/sass/main.scss:7
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/script/variable.rb:49:in `_perform'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/script/node.rb:40:in `perform'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:296:in `visit_prop'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:225:in `block in visit_import'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:225:in `map'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/root_node.rb:20:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/engine.rb:315:in `_render'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/engine.rb:262:in `render'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:146:in `block (2 levels) in compile'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:132:in `timed'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:145:in `block in compile'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/logger.rb:46:in `red'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:144:in `compile'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:124:in `compile_if_required'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:109:in `block (2 levels) in run'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:107:in `each'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:107:in `block in run'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:132:in `timed'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:106:in `run'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/compiler.rb:24:in `compile'
+/usr/local/rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/forwardable.rb:201:in `compile'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:92:in `sass_modified'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:85:in `sass_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/watch.rb:17:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/watch.rb:17:in `run_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:78:in `block (2 levels) in listen_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:77:in `each'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:77:in `block in listen_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:76:in `each'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:76:in `listen_callback'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/listener.rb:212:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/listener.rb:212:in `on_change'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/listener.rb:221:in `block in initialize_adapter'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `call'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `report_changes'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/adapter.rb:210:in `poll_changed_dirs'
+/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$color-background\".\A         on line 2 of /Users/chloe/Sites/sound-of-summer/src/assets/sass/partials/_base.scss\A         from line 7 of /Users/chloe/Sites/sound-of-summer/src/assets/sass/main.scss\A \A 1: /Users/chloe/Sites/sound-of-summer/src/assets/sass/main.scss"; }

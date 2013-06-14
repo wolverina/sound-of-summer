@@ -1,0 +1,34 @@
+.no-js {
+	.timeline .datum a { width: 100%; }
+
+	@media all and (min-width: $media-sm) {
+		.timeline { 
+			
+			li { width: 7.667%; } 
+			
+			.label { 
+				padding: 0 0 0 2px; 
+				font-size: .7em;
+			}
+
+			.datum a { 
+				width: 90%;
+				height: 200px;
+			}
+		}
+	}
+
+	@media all and (min-width: $media-md) {	
+		.timeline { 
+		
+			.label { 
+				margin-left: -5px;
+				font-size: .85em;
+			}
+
+			.datum a { 
+				width: 90%;
+			}
+		}
+	}
+}

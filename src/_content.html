@@ -1,0 +1,45 @@
+<div class="content">
+	
+	<header class="inner">
+	<h2 class="headline"><%= @event.date %></h2>
+	<p class="subhead"><%= @event.description %></p>
+	</header>
+		
+	<section class="inner">
+		<h3 class="accessibility">Songs</h3>
+		<ol class="songs items">
+			<li>
+				<a href="#" data-song-src="<%= (event_song_path(@event,song)) %>" <% if song.rdio_id %>class="available" title="Play &quot;<%= song.title %>&quot;"<% end %><% if !song.rdio_id %>title="Unavailable"<% end %>>
+					<span class="term"><%= song.title %></span>
+					<span class="def"><%= song.artist %></span>
+				</a>
+			</li>
+		</ol>
+	</section>
+		
+	<section class="inner">
+		<h3 class="accessibility">Locations</h3>
+		<ul class="items locations">
+			<li>
+				<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= location.location %>&zoom=15&size=430x200&sensor=false">
+
+				<div class="caption icon locality"><%= location.name %></div>
+			</li>
+
+		</ul>
+	</section>
+</div>
+
+<div class="player" role="application">
+	<div class="loading"></div>
+	<div class="inner">
+		<div class="indicator js-song-data">
+			<span id="indicator"></span>
+		</div>
+
+		<div class="meta js-song-data">
+			<span class="term" id="track"></span>
+			<span id="artist"></span>
+		</div>
+	</div>
+</div>
