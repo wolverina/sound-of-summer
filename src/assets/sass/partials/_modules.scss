@@ -394,9 +394,9 @@ a.twitter-share-button {
           top: 3em;
           margin-top: 0;
           left: 10%;
-          font-size: 2.5em;
+          font-size: calc-em(32px, $font-base);
           text-shadow: -1px -1px 1px rgba(200,200,200,.6);
-          letter-spacing: -4px;
+          letter-spacing: -2px;
 					@include transition(
 						$time-default opacity ease-out, 
 						$time-default*1.5 top ease-out
@@ -413,7 +413,10 @@ a.twitter-share-button {
     
     li { width: 57px; }
     
-    .datum a span { left: 17%; }
+    .datum a span { 
+    	font-size: calc-em(40px, $font-base);
+    	left: 15%; 
+    }
   }
 }
 

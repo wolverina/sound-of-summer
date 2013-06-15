@@ -1066,9 +1066,9 @@ a.twitter-share-button {
     top: 3em;
     margin-top: 0;
     left: 10%;
-    font-size: 2.5em;
+    font-size: 2em;
     text-shadow: -1px -1px 1px rgba(200, 200, 200, 0.6);
-    letter-spacing: -4px;
+    letter-spacing: -2px;
     -webkit-transition: 300ms opacity ease-out, 450ms top ease-out;
     -moz-transition: 300ms opacity ease-out, 450ms top ease-out;
     -o-transition: 300ms opacity ease-out, 450ms top ease-out;
@@ -1090,11 +1090,12 @@ a.twitter-share-button {
   }
   /* line 416, ../sass/partials/_modules.scss */
   .timeline .datum a span {
-    left: 17%;
+    font-size: 2.5em;
+    left: 15%;
   }
 }
 
-/* line 446, ../sass/partials/_modules.scss */
+/* line 449, ../sass/partials/_modules.scss */
 .player {
   bottom: -5em;
   position: fixed;
@@ -1111,28 +1112,28 @@ a.twitter-share-button {
   -o-transition: 300ms ease bottom;
   transition: 300ms ease bottom;
 }
-/* line 459, ../sass/partials/_modules.scss */
+/* line 462, ../sass/partials/_modules.scss */
 .player object {
   position: absolute;
 }
-/* line 461, ../sass/partials/_modules.scss */
+/* line 464, ../sass/partials/_modules.scss */
 .player .inner {
   padding: 0;
   position: relative;
 }
-/* line 466, ../sass/partials/_modules.scss */
+/* line 469, ../sass/partials/_modules.scss */
 .player .a-close {
   color: #cccccc;
   color: rgba(50, 50, 50, 0.2);
   top: 7.5px;
   right: 0;
 }
-/* line 472, ../sass/partials/_modules.scss */
+/* line 475, ../sass/partials/_modules.scss */
 .player .a-close:hover:before {
   color: #6c858c;
   color: rgba(0, 0, 0, 0.4);
 }
-/* line 478, ../sass/partials/_modules.scss */
+/* line 481, ../sass/partials/_modules.scss */
 .player .loading {
   font-size: 1.25em;
   padding-top: 7.5px;
@@ -1140,17 +1141,17 @@ a.twitter-share-button {
   position: absolute;
   right: 40px;
 }
-/* line 486, ../sass/partials/_modules.scss */
+/* line 489, ../sass/partials/_modules.scss */
 .player .null {
   font-weight: 700;
 }
-/* line 491, ../sass/partials/_modules.scss */
+/* line 494, ../sass/partials/_modules.scss */
 .player .meta,
 .player .null {
   margin: 0 60px 0 30px;
   padding-top: 7.5px;
 }
-/* line 496, ../sass/partials/_modules.scss */
+/* line 499, ../sass/partials/_modules.scss */
 .player .indicator {
   position: relative;
   float: left;
@@ -1162,7 +1163,7 @@ a.twitter-share-button {
   -o-animation: infinite pulsate 1s ease-out;
   animation: infinite pulsate 1s ease-out;
 }
-/* line 504, ../sass/partials/_modules.scss */
+/* line 507, ../sass/partials/_modules.scss */
 .player .indicator span:before {
   font-family: 'WebSymbolsRegular';
   color: #f05f3e;
@@ -1172,7 +1173,7 @@ a.twitter-share-button {
   padding: 10px 2px 0 0;
 }
 @media all and (min-width: 32em) {
-  /* line 446, ../sass/partials/_modules.scss */
+  /* line 449, ../sass/partials/_modules.scss */
   .player {
     width: 370px;
     padding: 0 1em 0.5em 1em;
@@ -1182,26 +1183,26 @@ a.twitter-share-button {
     right: 20px;
     box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.2);
   }
-  /* line 523, ../sass/partials/_modules.scss */
+  /* line 526, ../sass/partials/_modules.scss */
   .player .inner {
     width: 100%;
   }
 }
 
 @-webkit-keyframes pulsate {
-  /* line 529, ../sass/partials/_modules.scss */
+  /* line 532, ../sass/partials/_modules.scss */
   0% {
     -webkit-transform: scale(1, 1);
     -webkit-transform-origin: center bottom;
   }
 
-  /* line 533, ../sass/partials/_modules.scss */
+  /* line 536, ../sass/partials/_modules.scss */
   50% {
     -webkit-transform: scale(0.8, 0.8);
     -webkit-transform-origin: center bottom;
   }
 
-  /* line 537, ../sass/partials/_modules.scss */
+  /* line 540, ../sass/partials/_modules.scss */
   100% {
     -webkit-transform: scale(1, 1);
     -webkit-transform-origin: center bottom;
@@ -1209,19 +1210,19 @@ a.twitter-share-button {
 }
 
 @-moz-keyframes pulsate {
-  /* line 544, ../sass/partials/_modules.scss */
+  /* line 547, ../sass/partials/_modules.scss */
   0% {
     -moz-transform: scale(1, 1);
     -moz-transform-origin: center bottom;
   }
 
-  /* line 548, ../sass/partials/_modules.scss */
+  /* line 551, ../sass/partials/_modules.scss */
   50% {
     -moz-transform: scale(0.8, 0.8);
     -moz-transform-origin: center bottom;
   }
 
-  /* line 552, ../sass/partials/_modules.scss */
+  /* line 555, ../sass/partials/_modules.scss */
   100% {
     -moz-transform: scale(1, 1);
     -moz-transform-origin: center bottom;
@@ -1229,19 +1230,19 @@ a.twitter-share-button {
 }
 
 @-o-keyframes pulsate {
-  /* line 559, ../sass/partials/_modules.scss */
+  /* line 562, ../sass/partials/_modules.scss */
   0% {
     -o-transform: scale(1, 1);
     -o-transform-origin: center bottom;
   }
 
-  /* line 563, ../sass/partials/_modules.scss */
+  /* line 566, ../sass/partials/_modules.scss */
   50% {
     -o-transform: scale(0.8, 0.8);
     -o-transform-origin: center bottom;
   }
 
-  /* line 567, ../sass/partials/_modules.scss */
+  /* line 570, ../sass/partials/_modules.scss */
   100% {
     -o-transform: scale(1, 1);
     -o-transform-origin: center bottom;
@@ -1249,26 +1250,26 @@ a.twitter-share-button {
 }
 
 @-keyframes pulsate {
-  /* line 574, ../sass/partials/_modules.scss */
+  /* line 577, ../sass/partials/_modules.scss */
   0% {
     transform: scale(1, 1);
     transform-origin: center bottom;
   }
 
-  /* line 578, ../sass/partials/_modules.scss */
+  /* line 581, ../sass/partials/_modules.scss */
   50% {
     transform: scale(0.8, 0.8);
     transform-origin: center bottom;
   }
 
-  /* line 582, ../sass/partials/_modules.scss */
+  /* line 585, ../sass/partials/_modules.scss */
   100% {
     transform: scale(1, 1);
     transform-origin: center bottom;
   }
 }
 
-/* line 589, ../sass/partials/_modules.scss */
+/* line 592, ../sass/partials/_modules.scss */
 #b-about,
 #b-about .inner {
   display: none;

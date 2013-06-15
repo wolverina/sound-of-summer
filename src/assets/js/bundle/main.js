@@ -12,7 +12,6 @@ var Summer = {
 	},
 
 	init: function(){
-		//ie getComputedStyle
 		if (!window.getComputedStyle) {
 		    window.getComputedStyle = function(el, pseudo) {
 		        this.el = el;
@@ -99,7 +98,7 @@ var Summer = {
         		
         		$('#js-content').html('').load('_content.html', function(){
         			
-        			Summer.content(year, function(){
+        			Summer.event(year, function(){
         				scrollTo('#js-content');
         			});
         		});        		
@@ -180,7 +179,7 @@ var Summer = {
 		}
 	},
      
-	content: function(year, callback){
+	event: function(year, callback){
 		var data = {
 				'locations': [],
 				'songs': []
@@ -215,7 +214,7 @@ var Summer = {
 		$.each(Summer.data.songs, function(i){
 			if (this.event_id.indexOf(year) > -1) {
 				data.songs.push(this);
-	
+				
 				$songs.append(
 					'<li>'
 					+'<a href="#" data-rdio="" data-tempo="">'
@@ -232,6 +231,7 @@ var Summer = {
 		});
 
 		$songs.find('a').each(function(i) {
+		
 			var self = $(this),
 				r = Math.round(20+i),
 				g = Math.round(i * 2.25),
@@ -245,12 +245,49 @@ var Summer = {
 		$('#js-date').html(data.date);
 		$('#js-description').html(data.description);
 
+		$songs.find('a').on('click', function(e){
+			Summer.song($(this).find('.def').text(), $(this).find('.term').text());
+
+			e.preventDefault();
+		});
+
 		callback();
 
 	},
 
-	echonest: function(){
+	song: function(artist, title){
+		$.ajax({
+			url: "http://developer.echonest.com/api/v4/song/search?",
+			dataType: "jsonp",
+			data: {
+				format: 'jsonp',
+				results: 1,
+				bucket: 'audio_summary',
+				api_key: 'BMFA0JN7IZ2RSW1TA',
+				artist: artist,
+				title: title
+			}
+		}).done(function(data){
+			var bpm = data.response.songs[0].audio_summary.tempo,
+				$indicator = $('.indicator');
+			
+			$indicator.show();
 
+			if (bpm > 140) { //vivace
+				var period = (bpm/60);
+
+			} else {
+				var period = (bpm/120);
+			}
+
+			$indicator.css({
+				'-webkit-animation-duration': 1/period+'s',
+				'-moz-animation-duration': 1/period+'s',
+				'-ms-animation-duration': 1/period+'s',
+				'animation-duration': 1/period+'s'
+			});
+
+		});	
 	},
 
 	rdio: function(){
@@ -361,19 +398,7 @@ function scrollTo(id){
 // 			player.find('.loading').show();
 		
 // 			$.getJSON(json, function(local) {	
-// 				$.ajax({
-// 		       		url: "http://developer.echonest.com/api/v4/song/search?bucket=audio_summary&",
-// 					dataType: "jsonp",
-// 				   	data: {
-// 						format: 'jsonp',
-// 						results: 1,
-// 						api_key: 'BMFA0JN7IZ2RSW1TA',
-// 						bucket: 'id:rdio-us-streaming',
-// 						artist: local.artist,
-// 						title: local.title,
-// 						results: 1,
-// 						callback: ''	
-// 					}
+// 				
 				
 // 				}).done(function(data){
 // 					if( player.is(':hidden') ) {
@@ -415,26 +440,7 @@ function scrollTo(id){
 // 									$('#track').text(local.title);
 // 						          	$('#artist').text(local.artist);
 								
-// 									$('.indicator').show();
-									
-// 									var bpm = (song.audio_summary.tempo);
-// 									var heartBeat = function(){
-// 											$('.indicator').css({
-// 												'-webkit-animation-duration': 1/period+'s',
-// 												'-moz-animation-duration': 1/period+'s',
-// 												'animation-duration': 1/period+'s'
-// 											});
-// 									}
-									
-								
-// 									if (bpm > 140) { //vivace
-// 										var period = (song.audio_summary.tempo/60);
-// 										heartBeat();
-									
-// 									} else {
-// 										period = (song.audio_summary.tempo/120);
-// 										heartBeat();
-// 									}
+// 									
 								
 									
 // 								} else {
@@ -523,8 +529,7 @@ function scrollTo(id){
 // 	      	dataType : 'script'
 // 		}).done(function(html) {
 				
-// 				rainbowRoad('.songs');
-				
+			
 // 				var player = $('.player');
 				
 // 				if (!player.hasClass('initialized')) {
