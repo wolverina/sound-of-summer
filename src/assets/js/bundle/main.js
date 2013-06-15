@@ -111,13 +111,13 @@ var Summer = {
 			var $label = $timeline.find('.label');
 
 			$timeline.find('[data-song-count]').each(function(){
-				var self = $(this),
-					num = self.attr('data-song-count');
+				var $self = $(this),
+					num = $self.attr('data-song-count');
 					
 				if (size === '"base"' /*ff*/ || size === 'base') {
 					var value = (num)*2;
 
-					self.css({
+					$self.css({
 						'width': value +'px', 
 						'height': '35px', 
 						'vertical-align': 'bottom', 
@@ -125,21 +125,21 @@ var Summer = {
 					});
 
 					if (value > 75) {
-						self.css({ 'opacity': .8 });
+						$self.css({ 'opacity': .8 });
 					}
 
 					if (value > 118) {
-						self.css({ 'opacity': .9 });
+						$self.css({ 'opacity': .9 });
 					} 
 
 					if (value > 165) {
-						self.css({ 'opacity': .96 });
+						$self.css({ 'opacity': .96 });
 					}
 					
 				} else {
 					var value = (num)*(3.14159);
 
-					self.css({
+					$self.css({
 						'height': value +'px', 
 						'width': '100%',
 						'vertical-align': 'bottom', 
@@ -147,15 +147,15 @@ var Summer = {
 					});
 					
 					if (value > 118) {
-						self.css({ 'opacity': .8 });
+						$self.css({ 'opacity': .8 });
 					}
 
 					if (value > 185) {
-						self.css({ 'opacity': .9 });
+						$self.css({ 'opacity': .9 });
 					} 
 
 					if (value > 260) {
-						self.css({ 'opacity': .96 });
+						$self.css({ 'opacity': .96 });
 					}
 				}
 			});
@@ -186,7 +186,7 @@ var Summer = {
 			},
 			$songs = $('#js-songs');
 
-		$.each(Summer.data.events, function(i){
+		$.each(Summer.data.events, function(){
 			
 			if (this.id.indexOf(year) > -1) {
 				data.id = this.id,
@@ -195,7 +195,7 @@ var Summer = {
 			}
 		});
 
-		$.each(Summer.data.locations, function(i){
+		$.each(Summer.data.locations, function(){
 			if (this.event_id.indexOf(year) > -1) {	
 				data.locations.push(this);
 				$('#js-locations').append(
@@ -217,7 +217,7 @@ var Summer = {
 				
 				$songs.append(
 					'<li>'
-					+'<a href="#" data-rdio="" data-tempo="">'
+					+'<a href="#" data-rdio="">'
 					+'<span class="term">'
 					+this.title
 					+'</span>'
@@ -229,33 +229,64 @@ var Summer = {
 				);
 			}
 		});
-
-		$songs.find('a').each(function(i) {
 		
-			var self = $(this),
+		
+		$.each($songs.find('a'), function(i) {
+			var $self = $(this),
+				artist = $self.find('.def').text(), 
+				title = $self.find('.term').text();
+
+			R.request({
+				method: 'search',
+					content: {
+					query: title+' '+artist,
+					types: 'Track',
+					start: 0,
+					count: 1
+				},
+
+				success: function(response) {
+					$self
+					.attr('data-rdio', response.result.results[0].key)
+					.addClass('is-available');
+
+				},
+
+				error: function(response) {
+					console.log("error: " + response.message);
+				}
+			});
+
+			var $self = $(this),
 				r = Math.round(20+i),
 				g = Math.round(i * 2.25),
 				b = Math.round((10+i) * 2),
 				a = (.1+(i*.01));
-		  	self.css({
+
+		  	$self.css({
 		  		'backgroundColor': 'rgba('+ r +','+ g +','+ b +','+ a +')'
 		  	});
+		});
+			
+		$songs.find('a').on('click', function(e){
+			var $self = $(this),
+				artist = $self.find('.def').text(), 
+				title = $self.find('.term').text(),
+				rdio = $self.data('rdio');
+
+			Summer.song(artist, title, rdio);
+
+			e.preventDefault();
 		});
 
 		$('#js-date').html(data.date);
 		$('#js-description').html(data.description);
 
-		$songs.find('a').on('click', function(e){
-			Summer.song($(this).find('.def').text(), $(this).find('.term').text());
-
-			e.preventDefault();
-		});
-
 		callback();
-
 	},
 
-	song: function(artist, title){
+	song: function(artist, title, rdio){
+		
 		$.ajax({
 			url: "http://developer.echonest.com/api/v4/song/search?",
 			dataType: "jsonp",
@@ -268,6 +299,8 @@ var Summer = {
 				title: title
 			}
 		}).done(function(data){
+			Summer.player(rdio);
+
 			var bpm = data.response.songs[0].audio_summary.tempo,
 				$indicator = $('.indicator');
 			
@@ -286,12 +319,17 @@ var Summer = {
 				'-ms-animation-duration': 1/period+'s',
 				'animation-duration': 1/period+'s'
 			});
-
-		});	
+		});
 	},
 
-	rdio: function(){
+	player: function(src){
+		var $player = $('#js-player');
 
+		R.ready(function() {
+			$player.fadeIn();
+			console.log(src);
+		 	R.player.play({source: src});
+		});
 	}
 }
 
@@ -357,204 +395,3 @@ function scrollTop(anchor){
 function scrollTo(id){
 	$('html,body').animate({scrollTop: $(id).offset().top},'slow');
 }
-
-// 	flashDetect($('.songs'), $('.player'));
-	
-// 	if ($.cookie('activeEvent')){
-// 		var activeYear = $.cookie('activeEvent');
-// 	 	$('a[data-year="'+activeYear+'"]').addClass('active').trigger('click');
-// 	} 
-	
-// //trigger for rdio player
-// function rdioInit(container, player){
-	
-// 	//console.log('rdioInit');
-	
-// 	if (!player.hasClass('initialized')) {
-		
-// 	    $.ajax({
-// 	        'url': '/api/rdio_token',
-// 	        'dataType': "json",
-// 	        'success': function (token) {
-// 				player.rdio(token.playbackToken.result);
-// 				//lolcathost
-// 				//player.rdio('GAlNi78J_____zlyYWs5ZG02N2pkaHlhcWsyOWJtYjkyN2xvY2FsaG9zdEbwl7EHvbylWSWFWYMZwfc=');
-// 				player.addClass('initialized');
-// 	        }
-// 	    });
-// 	}
-	
-// 	player.bind('ready.rdio', function() {
-		
-// 		//console.log('rdioReady');
-				
-// 		rdioPlayer(player);
-
-// 		container.find('a').on('click', function(e){
-// 			var self = $(this),
-// 				url = self.attr('data-song-src'),
-// 				json = url+'.json';
-				
-// 			player.find('.loading').show();
-		
-// 			$.getJSON(json, function(local) {	
-// 				
-				
-// 				}).done(function(data){
-// 					if( player.is(':hidden') ) {
-// 						player.show(300);
-// 					}
-				
-// 				function noMatch(){ 
-// 					var noMatch = '<p class="null icon"><em>'+local.title+'</em> is not available.</p>';
-// 					player.css({ 'bottom': 0 })
-// 						.find('.loading').hide().end()
-// 						.find('.null').remove().end()
-// 						.find('.inner').append(noMatch);
-						
-// 				}//end nomatch
-				
-// 				if (data.response.songs.length) { //if echonest match
-				
-// 					$.each(data.response.songs, function(i, item) {
-// 						var song = data.response.songs[i];
-						
-// 						if (song.foreign_ids.length) { //if rdio match
-															
-// 							var str = song.foreign_ids[0].foreign_id,
-// 								id = str.replace('rdio-us-streaming:song:','');
-// 								$(container).find('a').removeClass('active');
-// 								self.addClass('active');
-								
-// 							player.rdio().play(id);
-							
-// 							player.css({ 'bottom': 0 })
-// 								.find('.loading').hide().end()
-// 								.find('.null').remove().end()
-// 								.find('.js-song-data').show().end()
-// 								.find('.indicator').hide();	
-							
-							
-// 							player.bind('playingSourceChanged.rdio', function(e, playingTrack) {
-// 								if (playingTrack) {						        
-// 									$('#track').text(local.title);
-// 						          	$('#artist').text(local.artist);
-								
-// 									
-								
-									
-// 								} else {
-// 									$('#track, #artist').text('');
-// 									$('.indicator, .null, .js-song-data').hide();
-// 									player.css({ 'bottom': '-1em' });
-// 								}
-// 							});
-																						
-// 						} else {	
-// 							noMatch();	
-// 							return false;							
-// 						}
-// 					});//end if echonest match
-					
-// 				} else {
-// 					//console.log('no match');
-// 					noMatch();
-// 					return false;
-// 				}
-// 			});//end ajax done
-// 	 	}); //oh god I Dont know what this is for 	
-		
-// 		}); //end onclick
-// 	});	//end rdio ready
-// }//end rdioInit
-
-
-// //flash detection
-// function flashDetect(container, player){
-// 	if (!swfobject.hasFlashPlayerVersion("9.0.115")) {
-// 		rdioPlayer($('.player'));
-//   		container.find('.available').removeClass('available').end().find('a').on('click', function(){
-// 			$('#no-flash, .loading').remove();
-// 			player.css({ 'bottom': 0 }).append('<div class="inner" id="no-flash"><p class="null icon">Flash required for playback.</p></div>');
-// 			return false;
-// 		});
-// 	}
-// }
-
-// function rdioPlayer(player){
-// 	var close = '<a href="#" title="Close" class="icon close"><span class="accessibility">Close</span></a>';
-	
-// 	player.find('.js-song-data').hide().end()
-// 		.find('.loading').show().end()
-// 		.find('.inner').append(close);
-
-// 	$('.close').on('click',function(e){
-// 		player.css({'bottom': '-5em'});
-// 		e.preventDefault();	
-// 		player.rdio().stop();
-// 		$('#track, #artist').text('');
-// 		$('.indicator, .null, .js-song-data').hide();
-// 	});
-// }
-
-// //scroll to top of page
-// 
-
-// 	//loading of the content on clicking a timeline link
-// 	timeline.find('a').on('click',function(e){
-// 		e.preventDefault();
-		
-// 		var self = $(this),
-// 			url = self.attr('href')+'.js',
-// 			json = self.attr('href')+'.json',
-// 			container = $('.hentry'),
-// 			activeYear = self.attr('data-year'),
-// 			date = new Date();
-// 			//this message will self destruct in one hour	
-// 		 	date.setTime(date.getTime() + (30 * 60 * 1000));
-			
-// 		$.cookie("activeEvent", activeYear, { expires: date });
-// 		$('.hentry').remove();	
-// 		$('.timeline-wrap').after('<article class="hentry" role="main" id="content"></article>');
-// 		timeline.find('a').removeClass('active');
-// 		self.addClass('active');
-				
-// 		//fake ajax	
-// 		$('.loading').show();
-// 		$('.timeline').fadeTo('fast', .5);
-						
-// 		$.ajax({
-// 			type : 'GET',
-// 		  	url: url,
-// 	      	dataType : 'script'
-// 		}).done(function(html) {
-				
-			
-// 				var player = $('.player');
-				
-// 				if (!player.hasClass('initialized')) {
-// 					rdioInit($('.songs'), $('.player'));
-// 				}
-				
-// 				//fake ajax
-// 				$('.loading').hide();
-// 				$('.timeline').fadeTo('fast', 1);
-				
-// 				//this should happen in the rdioReady of rdioInit, which ios devices don't see
-// 				$('.songs').find('a').on('click', function(e){
-// 					e.preventDefault();
-// 				});
-				
-// 				flashDetect($('.songs'), $('.player'));
-				
-				
-// 		 });	
-// 	});
-// }
-
-// //fade in some awesome stuff
-// function fadeIn(el) {
-// 	el.each(function(i) {
-// 	  	$(this).delay(i * 400).fadeIn();
-// 	});
-// }

@@ -898,7 +898,7 @@ a.twitter-share-button {
 }
 
 /* line 255, ../sass/partials/_modules.scss */
-.available .term:before {
+.is-available .term:before {
   content: 'H';
   font-family: 'EntypoRegular';
   margin-right: .25em;
@@ -1096,8 +1096,9 @@ a.twitter-share-button {
 }
 
 /* line 449, ../sass/partials/_modules.scss */
-.player {
-  bottom: -5em;
+.b-player {
+  bottom: 0;
+  display: none;
   position: fixed;
   z-index: 999;
   background: rgba(255, 255, 255, 0.8);
@@ -1112,97 +1113,21 @@ a.twitter-share-button {
   -o-transition: 300ms ease bottom;
   transition: 300ms ease bottom;
 }
-/* line 462, ../sass/partials/_modules.scss */
-.player object {
-  position: absolute;
-}
-/* line 464, ../sass/partials/_modules.scss */
-.player .inner {
-  padding: 0;
-  position: relative;
-}
-/* line 469, ../sass/partials/_modules.scss */
-.player .a-close {
-  color: #cccccc;
-  color: rgba(50, 50, 50, 0.2);
-  top: 7.5px;
-  right: 0;
-}
-/* line 475, ../sass/partials/_modules.scss */
-.player .a-close:hover:before {
-  color: #6c858c;
-  color: rgba(0, 0, 0, 0.4);
-}
-/* line 481, ../sass/partials/_modules.scss */
-.player .loading {
-  font-size: 1.25em;
-  padding-top: 7.5px;
-  margin-bottom: -15px;
-  position: absolute;
-  right: 40px;
-}
-/* line 489, ../sass/partials/_modules.scss */
-.player .null {
-  font-weight: 700;
-}
-/* line 494, ../sass/partials/_modules.scss */
-.player .meta,
-.player .null {
-  margin: 0 60px 0 30px;
-  padding-top: 7.5px;
-}
-/* line 499, ../sass/partials/_modules.scss */
-.player .indicator {
-  position: relative;
-  float: left;
-  width: 12px;
-  height: 12px;
-  margin-top: -2px;
-  -webkit-animation: infinite pulsate 1s ease-out;
-  -moz-animation: infinite pulsate 1s ease-out;
-  -o-animation: infinite pulsate 1s ease-out;
-  animation: infinite pulsate 1s ease-out;
-}
-/* line 507, ../sass/partials/_modules.scss */
-.player .indicator span:before {
-  font-family: 'WebSymbolsRegular';
-  color: #f05f3e;
-  content: 'N';
-  font-size: 1em;
-  position: absolute;
-  padding: 10px 2px 0 0;
-}
-@media all and (min-width: 32em) {
-  /* line 449, ../sass/partials/_modules.scss */
-  .player {
-    width: 370px;
-    padding: 0 1em 0.5em 1em;
-    border-radius: 10px 10px 0 0;
-    padding: 0 1em 0.5em 1em;
-    border: 1px solid rgba(50, 50, 50, 0.2);
-    right: 20px;
-    box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.2);
-  }
-  /* line 526, ../sass/partials/_modules.scss */
-  .player .inner {
-    width: 100%;
-  }
-}
 
 @-webkit-keyframes pulsate {
-  /* line 532, ../sass/partials/_modules.scss */
+  /* line 531, ../sass/partials/_modules.scss */
   0% {
     -webkit-transform: scale(1, 1);
     -webkit-transform-origin: center bottom;
   }
 
-  /* line 536, ../sass/partials/_modules.scss */
+  /* line 535, ../sass/partials/_modules.scss */
   50% {
     -webkit-transform: scale(0.8, 0.8);
     -webkit-transform-origin: center bottom;
   }
 
-  /* line 540, ../sass/partials/_modules.scss */
+  /* line 539, ../sass/partials/_modules.scss */
   100% {
     -webkit-transform: scale(1, 1);
     -webkit-transform-origin: center bottom;
@@ -1210,19 +1135,19 @@ a.twitter-share-button {
 }
 
 @-moz-keyframes pulsate {
-  /* line 547, ../sass/partials/_modules.scss */
+  /* line 546, ../sass/partials/_modules.scss */
   0% {
     -moz-transform: scale(1, 1);
     -moz-transform-origin: center bottom;
   }
 
-  /* line 551, ../sass/partials/_modules.scss */
+  /* line 550, ../sass/partials/_modules.scss */
   50% {
     -moz-transform: scale(0.8, 0.8);
     -moz-transform-origin: center bottom;
   }
 
-  /* line 555, ../sass/partials/_modules.scss */
+  /* line 554, ../sass/partials/_modules.scss */
   100% {
     -moz-transform: scale(1, 1);
     -moz-transform-origin: center bottom;
@@ -1230,19 +1155,19 @@ a.twitter-share-button {
 }
 
 @-o-keyframes pulsate {
-  /* line 562, ../sass/partials/_modules.scss */
+  /* line 561, ../sass/partials/_modules.scss */
   0% {
     -o-transform: scale(1, 1);
     -o-transform-origin: center bottom;
   }
 
-  /* line 566, ../sass/partials/_modules.scss */
+  /* line 565, ../sass/partials/_modules.scss */
   50% {
     -o-transform: scale(0.8, 0.8);
     -o-transform-origin: center bottom;
   }
 
-  /* line 570, ../sass/partials/_modules.scss */
+  /* line 569, ../sass/partials/_modules.scss */
   100% {
     -o-transform: scale(1, 1);
     -o-transform-origin: center bottom;
@@ -1250,34 +1175,34 @@ a.twitter-share-button {
 }
 
 @-keyframes pulsate {
-  /* line 577, ../sass/partials/_modules.scss */
+  /* line 576, ../sass/partials/_modules.scss */
   0% {
     transform: scale(1, 1);
     transform-origin: center bottom;
   }
 
-  /* line 581, ../sass/partials/_modules.scss */
+  /* line 580, ../sass/partials/_modules.scss */
   50% {
     transform: scale(0.8, 0.8);
     transform-origin: center bottom;
   }
 
-  /* line 585, ../sass/partials/_modules.scss */
+  /* line 584, ../sass/partials/_modules.scss */
   100% {
     transform: scale(1, 1);
     transform-origin: center bottom;
   }
 }
 
-/* line 592, ../sass/partials/_modules.scss */
+/* line 591, ../sass/partials/_modules.scss */
 #b-about,
 #b-about .inner {
   display: none;
 }
 
 /* line 4, ../sass/partials/_forks.scss */
-.no-touch .items-songs a.active,
-.no-touch .items-songs a.available:hover {
+.no-touch .items-songs a.is-active,
+.no-touch .items-songs a.is-available:hover {
   cursor: pointer;
   border-color: #cccccc;
   border-color: rgba(50, 50, 50, 0.2);
@@ -1285,7 +1210,7 @@ a.twitter-share-button {
   box-shadow: inset 0 0 20px rgba(50, 50, 50, 0.2);
 }
 /* line 12, ../sass/partials/_forks.scss */
-.no-touch .items-songs a.active {
+.no-touch .items-songs a.is-active {
   border-color: rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);
 }
