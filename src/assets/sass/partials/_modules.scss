@@ -1,28 +1,11 @@
 .inner {
 	margin: 0 auto;
-	padding: $unit-v/2 12.5%;
+	padding: $unit-v/2 7.5%;
 	@include pie-clearfix;
 
 	@media all and (min-width: $media-sm) {		
-		width: 27.5em;
-		padding: $unit-h 0;
+		padding: $unit-h 12.5%;
 	}
-
-  @media all and (min-width: $media-md) {
-    width: 42.7em;
-  }
-
-  @media all and (min-width: $media-lg) {
-    width: 58em;
-  }
-}
-
-.col { 
-	display: inline-block; 
-	width: 49%;
-	vertical-align: top;
-
-	& + .col { margin-left: $unit-h; }
 }
 
 .g-header {
@@ -78,7 +61,10 @@
 
 .colophon { font-size: 1em; }
 
-.term { font-weight: 700; }
+.term { 
+	font-weight: 700; 
+	margin-right: .3em;
+}
 
 .inline > * { display: inline-block; }
 
@@ -206,11 +192,11 @@ a.twitter-share-button {
 
 	li { 
 		line-height: 1;
+
 		& + li { margin-top: 3px; }
 	}
 	
 	a { 
-	
 		display: block;
 		padding: 13px 8px; 
 		background: rgba(20, 0, 20, 0.0976563); 
@@ -218,6 +204,7 @@ a.twitter-share-button {
 		border-radius: 3px;
 		color: #fff; 
 		cursor: default;
+
 		@include transition(
 			$time-default ease text-shadow, 
 			$time-default ease box-shadow
@@ -227,7 +214,7 @@ a.twitter-share-button {
   @media all and (min-width: $media-sm) {
     li {
       display: inline-block; 
-      margin: 3px -1px 0 0;
+      margin: 3px 3px 0 0;
     }
     
     a { display: inline-block; }
@@ -249,16 +236,18 @@ a.twitter-share-button {
 	img { 
 		border: 5px solid #fff;
 		border-radius: 2px;
-		opacity: .75;		
+		opacity: .75;	
+		@include box-sizing(border-box);	
 	}
 
   @media all and (min-width: $media-md) {
     margin-bottom: -$unit-h;
     
     li { 
-      width: 47.5%;
+      width: 47%;
       margin: 0 $unit-v $unit-h 0; 
       vertical-align: top;
+      @include box-sizing(border-box);
     }
   }
 }
@@ -275,8 +264,6 @@ a.twitter-share-button {
 
 }
 
-
-
 .timeline-wrap {
 	border-color: $color-neutral-hex;
 	border: 1px solid $color-neutral;
@@ -284,7 +271,7 @@ a.twitter-share-button {
 	border-radius: 8px;
 	background-color: $color-relief-hex;
 	background-color: $color-relief;
-	margin: $unit-h auto;
+	margin: $unit-h 7.5%;
   @include transition($time-default ease-out width);
 
   @media all and (min-width: $media-sm) {
@@ -292,7 +279,8 @@ a.twitter-share-button {
   }
 }
 		
-.timeline {  
+.timeline {
+	width: 16em;
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
@@ -301,14 +289,7 @@ a.twitter-share-button {
 		position: relative; 
 		padding: .15em 0;
 	}
-	
-	.loading { 
-		position: absolute; 
-		top: 46%; 
-		left: 46%; 
-		font-size: 4em;
-	}
-	
+
 	.datum { 
 		position: relative; 
 		margin-left: 2.5*$unit-h;
@@ -351,13 +332,13 @@ a.twitter-share-button {
 	}
 
   @media all and (min-width: $media-sm) {
-    width: 26em;
+  	width: 24.1em;
     
     li { 
       display: inline-block; 
       
       & + li {
-        margin-left: -2px;
+        margin-left: 2px;
         
         .label { border-left: 1px solid rgba(0,0,0,.1); }
       }
@@ -391,13 +372,9 @@ a.twitter-share-button {
   }
 
   @media all and (min-width: $media-md) {
-    width: 34.5em;
+    width: 35.7em;
     
-    li { 
-      width: 45px; 
-      
-      & + li { margin-left: 0; }
-    }
+    li { width: 42px; }
 
     .datum { 
       a { 
@@ -416,7 +393,6 @@ a.twitter-share-button {
           opacity: 0;
           top: 3em;
           margin-top: 0;
-          /*left: -999em; */
           left: 10%;
           font-size: 2.5em;
           text-shadow: -1px -1px 1px rgba(200,200,200,.6);
@@ -433,7 +409,7 @@ a.twitter-share-button {
   }
 
   @media all and (min-width: $media-lg) {
-    width: 42.5em;  
+    width: 47.9em;  
     
     li { width: 57px; }
     
