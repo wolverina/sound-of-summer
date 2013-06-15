@@ -8,7 +8,7 @@ var Summer = {
 	},
 
 	'nodes': {
-		'close': '<a href="#" title="Close" class="icon a-close"><span class="accessibility">Close</span></a>'
+		'close': '<a href="#" title="Close" class="icon icon-icn-close a-close"><span>Close</span></a>'
 	},
 
 	init: function(){
@@ -248,8 +248,8 @@ var Summer = {
 				success: function(response) {
 					$self
 					.attr('data-rdio', response.result.results[0].key)
-					.addClass('is-available');
-
+					.addClass('is-available')
+					.prepend('<span class="icon icon-icn-music"></span>');
 				},
 
 				error: function(response) {

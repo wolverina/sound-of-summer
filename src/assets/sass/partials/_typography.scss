@@ -1,0 +1,46 @@
+.hdr-headline {
+	font-size: 2.8em;
+	line-height: .9;
+	font-weight: 800;
+	text-shadow: -1px -1px 1px #cfcfcf;
+	font-style: italic; 
+	float: left;
+	width: 85%;
+		
+	a {
+		color: #fff;
+		border-bottom: none;
+	}
+}
+
+.hdr-subhead {
+	font-size: 2em;
+	line-height: 1.3;
+	letter-spacing: -1px;
+	font-weight: 300;
+	margin: 0;
+	color: $color-body-hex;
+	color: $color-body;
+}
+
+.hdr-title {
+	color: white;
+	font-size: 1.4em;
+}
+	
+.accessibility { 
+  position: absolute; 
+  left: -999em; 
+}
+
+.colophon { font-size: 1em; }
+
+.term { 
+	font-weight: 700; 
+	margin-right: .3em;
+}
+
+.caption { 
+	margin: 0 0 0 $unit-h; 
+	font-weight: 800;
+}

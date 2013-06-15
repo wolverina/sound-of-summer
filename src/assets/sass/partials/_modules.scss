@@ -11,7 +11,7 @@
 .g-header {
 	margin: $unit-h 0;
 	
-	.resource { 
+	.a-resource { 
 		float: right; 
 		margin-top: $unit-v/2;
 		padding-bottom: 0;
@@ -22,97 +22,32 @@
   }
 }
 
-/*typography*/
-.hdr-headline {
-	font-size: 2.8em;
-	line-height: .9;
-	font-weight: 800;
-	text-shadow: -1px -1px 1px #cfcfcf;
-	font-style: italic; 
-	float: left;
-	width: 85%;
-		
-	a {
-		color: #fff;
-		border-bottom: none;
+.icon {
+	display: block;
+
+	span {
+		position: absolute;
+		left: -999em;
 	}
 }
 
-.hdr-subhead {
-	font-size: 2em;
-	line-height: 1.3;
-	letter-spacing: -1px;
-	font-weight: 300;
-	margin: 0;
-	color: $color-body-hex;
-	color: $color-body;
+.icon-icn-close {
+	width: 20px;
+	height: 20px;
 }
 
-.hdr-title {
-	color: white;
-	font-size: 1.4em;
-}
-	
-.accessibility { 
-  position: absolute; 
-  left: -999em; 
+.icon-icn-music {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 3px;
 }
 
-
-.colophon { font-size: 1em; }
-
-.term { 
-	font-weight: 700; 
-	margin-right: .3em;
+.icon-icn-up {
+	width: 20px;
+	height: 20px;
 }
 
-.inline > * { display: inline-block; }
-
-.caption { 
-	margin: 0 0 0 $unit-h; 
-	font-weight: 800;
-}
-
-// .icon {
-// 	&:before {
-// 		font-family: 'WebSymbolsRegular'; 
-// 		margin-right: .25em;
-// 	}
-
-// 	&.locality:before { 
-// 		content: '?'; 
-// 		font-size: .9em; 
-// 		position: relative;
-// 		top: -1px;
-// 		margin-right: .5em;
-// 	}
-	
-// 	&.top:before { 
-// 		content: ':'; font-size: $unit-h; 
-// 		margin-left: $unit-h/4;
-// 	}
-// 	&.close:before {
-// 		content:"'";
-// 		font-size: $unit-h/1.5;
-// 	}
-
-	
-// 	&.null:before { 
-// 		content: 'x';
-// 		color: $color-neutral-hex;
-// 		color: $color-neutral; 
-// 		padding: 0 0 0 4px; 
-// 		float: left;
-// 		margin-left: -2*$unit-v;
-// 	}
-	
-// 	&.twitter:before {
-// 		content: 't';
-// 	}
-	
-// }
-	
-/*objects*/
 .b-accent {
 	background: $color-inverse;
 	border-color: $color-relief-hex;
@@ -121,6 +56,7 @@
 	border-width: 1px 0;
 	color: $color-relief-hex;
 	color: $color-relief;
+	position: relative;
 	
 	p { font-size: calc-em(18px, $font-base); }
 	
@@ -130,15 +66,18 @@
 	}
 
 	.inner { 
-		position: relative;
-		padding: $unit-v 12.5%; 
+		padding: $unit-v 7.5%;
+
+	  @media all and (min-width: $media-sm) {
+	  	padding: $unit-v 12.5%;
+	  }
 	}
 }
 
 .a-close { 
 	position: absolute; 
-	top: $unit-v;
-	right: 0;
+	top: $unit-h/2;
+	right: $unit-h/2;
 	border-bottom: none;
 	color: #fff;	
 	
@@ -167,12 +106,6 @@
 		color: $color-body-hex;
 		color: $color-body;
 	}
-}
-
-
-a.twitter-share-button { 
-	display: inline-block; 
-	margin-top: $unit-v/2;
 }
 
 .items {
@@ -250,18 +183,6 @@ a.twitter-share-button {
       @include box-sizing(border-box);
     }
   }
-}
-
-.is-available .term:before {
-	content: 'H';
-	font-family: 'EntypoRegular'; 
-	margin-right: .25em;
-	display: inline;
-	line-height: 0;/*amateur hour at the foundry*/
-	font-size: 1.5em;
-	text-shadow: none;
-	font-weight: 400;
-
 }
 
 .timeline-wrap {
