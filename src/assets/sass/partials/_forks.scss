@@ -1,34 +1,15 @@
-.no-js {
-	.timeline .datum a { width: 100%; }
-
-	@media all and (min-width: $media-sm) {
-		.timeline { 
-			
-			li { width: 7.667%; } 
-			
-			.label { 
-				padding: 0 0 0 2px; 
-				font-size: .7em;
-			}
-
-			.datum a { 
-				width: 90%;
-				height: 200px;
-			}
+.no-touch {
+	.items-songs {
+		a.active,
+		a.available:hover {
+			cursor: pointer;
+			border-color: $color-neutral-hex;
+			border-color: $color-neutral;
+			text-shadow: 0 0 1px $color-relief;			
+			box-shadow: inset 0 0 $unit-h $color-neutral;
 		}
-	}
 
-	@media all and (min-width: $media-md) {	
-		.timeline { 
-		
-			.label { 
-				margin-left: -5px;
-				font-size: .85em;
-			}
+		a.active { border-color: rgba(0,0,0,.25); box-shadow: inset 0 0 $unit-h rgba(0,0,0,.25); }
 
-			.datum a { 
-				width: 90%;
-			}
-		}
 	}
 }

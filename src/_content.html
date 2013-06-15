@@ -1,32 +1,18 @@
-<div class="content">
+<div class="b-content">
 	
 	<header class="inner">
-	<h2 class="headline"><%= @event.date %></h2>
-	<p class="subhead"><%= @event.description %></p>
+	<h2 class="hdr-headline" id="js-date"></h2>
+	<p class="hdr-subhead" id="js-description"></p>
 	</header>
 		
 	<section class="inner">
 		<h3 class="accessibility">Songs</h3>
-		<ol class="songs items">
-			<li>
-				<a href="#" data-song-src="<%= (event_song_path(@event,song)) %>" <% if song.rdio_id %>class="available" title="Play &quot;<%= song.title %>&quot;"<% end %><% if !song.rdio_id %>title="Unavailable"<% end %>>
-					<span class="term"><%= song.title %></span>
-					<span class="def"><%= song.artist %></span>
-				</a>
-			</li>
-		</ol>
+		<ol class="items-songs" id="js-songs"></ol>
 	</section>
 		
 	<section class="inner">
 		<h3 class="accessibility">Locations</h3>
-		<ul class="items locations">
-			<li>
-				<img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= location.location %>&zoom=15&size=430x200&sensor=false">
-
-				<div class="caption icon locality"><%= location.name %></div>
-			</li>
-
-		</ul>
+		<ul class="items-locations" id="js-locations"></ul>
 	</section>
 </div>
 

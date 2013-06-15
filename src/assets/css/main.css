@@ -1,78 +1,1318 @@
-/*
-Syntax error: Undefined variable: "$color-background".
-        on line 2 of /Users/chloe/Sites/sound-of-summer/src/assets/sass/partials/_base.scss
-        from line 7 of /Users/chloe/Sites/sound-of-summer/src/assets/sass/main.scss
+/* normalize.css v1.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 22, ../sass/partials/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
 
-1: /Users/chloe/Sites/sound-of-summer/src/assets/sass/main.scss
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 32, ../sass/partials/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
 
-Backtrace:
-/Users/chloe/Sites/sound-of-summer/src/assets/sass/partials/_base.scss:2
-/Users/chloe/Sites/sound-of-summer/src/assets/sass/main.scss:7
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/script/variable.rb:49:in `_perform'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/script/node.rb:40:in `perform'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:296:in `visit_prop'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:318:in `visit_rule'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:225:in `block in visit_import'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:225:in `map'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `map'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:107:in `block in visit_children'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:119:in `with_environment'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:106:in `visit_children'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:126:in `visit_root'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/base.rb:37:in `visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:98:in `visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/tree/root_node.rb:20:in `render'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/engine.rb:315:in `_render'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/sass-3.2.5/lib/sass/engine.rb:262:in `render'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:146:in `block (2 levels) in compile'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:132:in `timed'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:145:in `block in compile'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/logger.rb:46:in `red'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:144:in `compile'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:124:in `compile_if_required'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:109:in `block (2 levels) in run'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:107:in `each'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:107:in `block in run'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:132:in `timed'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/compiler.rb:106:in `run'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/compiler.rb:24:in `compile'
-/usr/local/rvm/rubies/ruby-1.9.3-p286/lib/ruby/1.9.1/forwardable.rb:201:in `compile'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:92:in `sass_modified'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:85:in `sass_callback'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/watch.rb:17:in `call'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/watch.rb:17:in `run_callback'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:78:in `block (2 levels) in listen_callback'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:77:in `each'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:77:in `block in listen_callback'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:76:in `each'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/lib/compass/watcher/project_watcher.rb:76:in `listen_callback'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/listener.rb:212:in `call'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/listener.rb:212:in `on_change'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/listener.rb:221:in `block in initialize_adapter'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `call'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `report_changes'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/adapter.rb:210:in `poll_changed_dirs'
-/usr/local/rvm/gems/ruby-1.9.3-p286/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `block in start'
-*/
-body:before {
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 43, ../sass/partials/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+/* line 53, ../sass/partials/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 68, ../sass/partials/_normalize.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+/* line 83, ../sass/partials/_normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+/* line 91, ../sass/partials/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 103, ../sass/partials/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 112, ../sass/partials/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+/* line 126, ../sass/partials/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 131, ../sass/partials/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 136, ../sass/partials/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 141, ../sass/partials/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 146, ../sass/partials/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 151, ../sass/partials/_normalize.scss */
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+/* line 160, ../sass/partials/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+/* line 169, ../sass/partials/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 173, ../sass/partials/_normalize.scss */
+blockquote {
+  margin: 1em 40px;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 181, ../sass/partials/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+/* line 190, ../sass/partials/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+/* line 200, ../sass/partials/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 210, ../sass/partials/_normalize.scss */
+p,
+pre {
+  margin: 1em 0;
+}
+
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+/* line 221, ../sass/partials/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: "courier new", monospace;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 231, ../sass/partials/_normalize.scss */
+pre {
   white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$color-background\".\A         on line 2 of /Users/chloe/Sites/sound-of-summer/src/assets/sass/partials/_base.scss\A         from line 7 of /Users/chloe/Sites/sound-of-summer/src/assets/sass/main.scss\A \A 1: /Users/chloe/Sites/sound-of-summer/src/assets/sass/main.scss"; }
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+/* line 241, ../sass/partials/_normalize.scss */
+q {
+  quotes: none;
+}
+
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+/* line 250, ../sass/partials/_normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 259, ../sass/partials/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 268, ../sass/partials/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 275, ../sass/partials/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 279, ../sass/partials/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 294, ../sass/partials/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 298, ../sass/partials/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+/* line 308, ../sass/partials/_normalize.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+/* line 317, ../sass/partials/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+/* line 331, ../sass/partials/_normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 340, ../sass/partials/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+/* line 352, ../sass/partials/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+/* line 364, ../sass/partials/_normalize.scss */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 372, ../sass/partials/_normalize.scss */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+/* line 384, ../sass/partials/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+/* line 401, ../sass/partials/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 414, ../sass/partials/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 426, ../sass/partials/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 443, ../sass/partials/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 454, ../sass/partials/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 466, ../sass/partials/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 479, ../sass/partials/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 492, ../sass/partials/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+/* line 501, ../sass/partials/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 511, ../sass/partials/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 524, ../sass/partials/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, ../sass/partials/_base.scss */
+body {
+  background-color: #b5e0eb;
+  color: #6c858c;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "proxima-nova-condensed", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6875em;
+}
+/* line 9, ../sass/partials/_base.scss */
+body:after {
+  content: 'base';
+  display: none;
+}
+
+/* line 15, ../sass/partials/_base.scss */
+p {
+  margin: 0 0 1em 0;
+}
+
+/* line 17, ../sass/partials/_base.scss */
+a {
+  color: #6c858c;
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  border-color: #6c858c;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+  padding-bottom: .2em;
+  -webkit-transition: 300ms color ease, 300ms border-color ease;
+  -moz-transition: 300ms color ease, 300ms border-color ease;
+  -o-transition: 300ms color ease, 300ms border-color ease;
+  transition: 300ms color ease, 300ms border-color ease;
+}
+/* line 29, ../sass/partials/_base.scss */
+a:hover {
+  color: #cccccc;
+  color: rgba(50, 50, 50, 0.2);
+  border-color: #cccccc;
+  border-color: rgba(50, 50, 50, 0.2);
+}
+/* line 36, ../sass/partials/_base.scss */
+a:visited {
+  color: #6c858c;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 43, ../sass/partials/_base.scss */
+abbr[title] {
+  border: none;
+}
+
+/* line 50, ../sass/partials/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 1em;
+  color: #fff;
+  margin: 0;
+}
+
+/* line 57, ../sass/partials/_base.scss */
+img {
+  max-width: 100%;
+}
+
+@media all and (min-width: 30em) {
+  /* line 60, ../sass/partials/_base.scss */
+  body:after {
+    content: 'small';
+    display: none;
+  }
+}
+@media all and (min-width: 45em) {
+  /* line 67, ../sass/partials/_base.scss */
+  body:after {
+    content: 'medium';
+    display: none;
+  }
+}
+@media all and (min-width: 45em) {
+  /* line 74, ../sass/partials/_base.scss */
+  body:after {
+    content: 'large';
+    display: none;
+  }
+}
+/* line 1, ../sass/partials/_modules.scss */
+.inner {
+  margin: 0 auto;
+  padding: 7.5px 12.5%;
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media all and (min-width: 30em) {
+  /* line 1, ../sass/partials/_modules.scss */
+  .inner {
+    width: 27.5em;
+    padding: 20px 0;
+  }
+}
+@media all and (min-width: 45em) {
+  /* line 1, ../sass/partials/_modules.scss */
+  .inner {
+    width: 42.7em;
+  }
+}
+@media all and (min-width: 60em) {
+  /* line 1, ../sass/partials/_modules.scss */
+  .inner {
+    width: 58em;
+  }
+}
+
+/* line 20, ../sass/partials/_modules.scss */
+.col {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+/* line 25, ../sass/partials/_modules.scss */
+.col + .col {
+  margin-left: 20px;
+}
+
+/* line 28, ../sass/partials/_modules.scss */
+.g-header {
+  margin: 20px 0;
+}
+/* line 31, ../sass/partials/_modules.scss */
+.g-header .resource {
+  float: right;
+  margin-top: 7.5px;
+  padding-bottom: 0;
+}
+@media all and (min-width: 30em) {
+  /* line 28, ../sass/partials/_modules.scss */
+  .g-header {
+    margin: 40px 0 0 0;
+  }
+}
+
+/*typography*/
+/* line 43, ../sass/partials/_modules.scss */
+.hdr-headline {
+  font-size: 2.8em;
+  line-height: .9;
+  font-weight: 800;
+  text-shadow: -1px -1px 1px #cfcfcf;
+  font-style: italic;
+  float: left;
+  width: 85%;
+}
+/* line 52, ../sass/partials/_modules.scss */
+.hdr-headline a {
+  color: #fff;
+  border-bottom: none;
+}
+
+/* line 58, ../sass/partials/_modules.scss */
+.hdr-subhead {
+  font-size: 2em;
+  line-height: 1.3;
+  letter-spacing: -1px;
+  font-weight: 300;
+  margin: 0;
+  color: #6c858c;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 68, ../sass/partials/_modules.scss */
+.hdr-title {
+  color: white;
+  font-size: 1.4em;
+}
+
+/* line 73, ../sass/partials/_modules.scss */
+.accessibility {
+  position: absolute;
+  left: -999em;
+}
+
+/* line 79, ../sass/partials/_modules.scss */
+.colophon {
+  font-size: 1em;
+}
+
+/* line 81, ../sass/partials/_modules.scss */
+.term {
+  font-weight: 700;
+}
+
+/* line 83, ../sass/partials/_modules.scss */
+.inline > * {
+  display: inline-block;
+}
+
+/* line 85, ../sass/partials/_modules.scss */
+.caption {
+  margin: 0 0 0 20px;
+  font-weight: 800;
+}
+
+/*objects*/
+/* line 130, ../sass/partials/_modules.scss */
+.b-accent {
+  background: #66c2de;
+  border-color: #e6f5f8;
+  border: 1px solid rgba(255, 255, 255, 0.66);
+  box-shadow: inset 0 0 15px 7.5px rgba(150, 150, 150, 0.1);
+  border-width: 1px 0;
+  color: #e6f5f8;
+  color: rgba(255, 255, 255, 0.66);
+}
+/* line 139, ../sass/partials/_modules.scss */
+.b-accent p {
+  font-size: 1.125em;
+}
+/* line 141, ../sass/partials/_modules.scss */
+.b-accent a, .b-accent a:visited {
+  color: white;
+  border-color: white;
+}
+/* line 146, ../sass/partials/_modules.scss */
+.b-accent .inner {
+  position: relative;
+  padding: 15px 12.5%;
+}
+
+/* line 152, ../sass/partials/_modules.scss */
+.a-close {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  border-bottom: none;
+  color: #fff;
+}
+/* line 159, ../sass/partials/_modules.scss */
+.a-close:hover:before {
+  color: #b5e0eb;
+}
+
+/* line 162, ../sass/partials/_modules.scss */
+.a-top {
+  color: #cccccc;
+  color: rgba(50, 50, 50, 0.2);
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-color: #efefef;
+  border: 1px solid rgba(150, 150, 150, 0.1);
+  padding: 5px 10px;
+  border-radius: 0 0 8px 8px;
+  -webkit-transition: 300ms ease color, 300ms ease background-color;
+  -moz-transition: 300ms ease color, 300ms ease background-color;
+  -o-transition: 300ms ease color, 300ms ease background-color;
+  transition: 300ms ease color, 300ms ease background-color;
+}
+/* line 179, ../sass/partials/_modules.scss */
+.a-top:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #6c858c;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 187, ../sass/partials/_modules.scss */
+a.twitter-share-button {
+  display: inline-block;
+  margin-top: 7.5px;
+}
+
+/* line 192, ../sass/partials/_modules.scss */
+.items, .items-songs, .items-locations {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  *zoom: 1;
+}
+/* line 38, ../../../../../../../usr/local/rvm/gems/ruby-1.9.3-p286/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.items:after, .items-songs:after, .items-locations:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 199, ../sass/partials/_modules.scss */
+.items-songs {
+  color: #fff;
+  text-transform: capitalize;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+  font-weight: 300;
+}
+/* line 207, ../sass/partials/_modules.scss */
+.items-songs li {
+  line-height: 1;
+}
+/* line 209, ../sass/partials/_modules.scss */
+.items-songs li + li {
+  margin-top: 3px;
+}
+/* line 212, ../sass/partials/_modules.scss */
+.items-songs a {
+  display: block;
+  padding: 13px 8px;
+  background: rgba(20, 0, 20, 0.09766);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #fff;
+  cursor: default;
+  -webkit-transition: 300ms ease text-shadow, 300ms ease box-shadow;
+  -moz-transition: 300ms ease text-shadow, 300ms ease box-shadow;
+  -o-transition: 300ms ease text-shadow, 300ms ease box-shadow;
+  transition: 300ms ease text-shadow, 300ms ease box-shadow;
+}
+@media all and (min-width: 30em) {
+  /* line 228, ../sass/partials/_modules.scss */
+  .items-songs li {
+    display: inline-block;
+    margin: 3px -1px 0 0;
+  }
+  /* line 233, ../sass/partials/_modules.scss */
+  .items-songs a {
+    display: inline-block;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  /* line 199, ../sass/partials/_modules.scss */
+  .items-songs {
+    font-weight: 400;
+  }
+}
+
+/* line 244, ../sass/partials/_modules.scss */
+.items-locations li {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+/* line 249, ../sass/partials/_modules.scss */
+.items-locations img {
+  border: 5px solid white;
+  border-radius: 2px;
+  opacity: .75;
+}
+@media all and (min-width: 45em) {
+  /* line 241, ../sass/partials/_modules.scss */
+  .items-locations {
+    margin-bottom: -20px;
+  }
+  /* line 258, ../sass/partials/_modules.scss */
+  .items-locations li {
+    width: 47.5%;
+    margin: 0 15px 20px 0;
+    vertical-align: top;
+  }
+}
+
+/* line 266, ../sass/partials/_modules.scss */
+.available .term:before {
+  content: 'H';
+  font-family: 'EntypoRegular';
+  margin-right: .25em;
+  display: inline;
+  line-height: 0;
+  /*amateur hour at the foundry*/
+  font-size: 1.5em;
+  text-shadow: none;
+  font-weight: 400;
+}
+
+/* line 280, ../sass/partials/_modules.scss */
+.timeline-wrap {
+  border-color: #cccccc;
+  border: 1px solid rgba(50, 50, 50, 0.2);
+  padding: 20px 13.33333px;
+  border-radius: 8px;
+  background-color: #e6f5f8;
+  background-color: rgba(255, 255, 255, 0.66);
+  margin: 20px auto;
+  -webkit-transition: 300ms ease-out width;
+  -moz-transition: 300ms ease-out width;
+  -o-transition: 300ms ease-out width;
+  transition: 300ms ease-out width;
+}
+@media all and (min-width: 30em) {
+  /* line 291, ../sass/partials/_modules.scss */
+  .timeline-wrap .timeline-wrap {
+    padding: 20px;
+  }
+}
+
+/* line 295, ../sass/partials/_modules.scss */
+.timeline {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+/* line 300, ../sass/partials/_modules.scss */
+.timeline li {
+  position: relative;
+  padding: 0.15em 0;
+}
+/* line 305, ../sass/partials/_modules.scss */
+.timeline .loading {
+  position: absolute;
+  top: 46%;
+  left: 46%;
+  font-size: 4em;
+}
+/* line 312, ../sass/partials/_modules.scss */
+.timeline .datum {
+  position: relative;
+  margin-left: 50px;
+}
+/* line 316, ../sass/partials/_modules.scss */
+.timeline .datum a {
+  background-color: #f05f3e;
+  display: inline-block;
+  text-align: right;
+  vertical-align: bottom;
+  border-radius: 2px 5px 5px 2px;
+  padding: 6.66667px;
+  border: none;
+  -webkit-transition: 300ms ease background-color;
+  -moz-transition: 300ms ease background-color;
+  -o-transition: 300ms ease background-color;
+  transition: 300ms ease background-color;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 328, ../sass/partials/_modules.scss */
+.timeline .datum span {
+  color: white;
+  font-weight: 800;
+  position: relative;
+  display: block;
+  line-height: 1;
+  font-size: .8em;
+}
+/* line 338, ../sass/partials/_modules.scss */
+.timeline .datum a.active,
+.timeline .datum a:hover {
+  background-color: #f2d05e;
+}
+/* line 340, ../sass/partials/_modules.scss */
+.timeline .datum a.active {
+  color: #f2d05e;
+}
+/* line 344, ../sass/partials/_modules.scss */
+.timeline .label {
+  font-size: 88%;
+  margin-top: 10px;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media all and (min-width: 30em) {
+  /* line 295, ../sass/partials/_modules.scss */
+  .timeline {
+    width: 26em;
+  }
+  /* line 356, ../sass/partials/_modules.scss */
+  .timeline li {
+    display: inline-block;
+  }
+  /* line 359, ../sass/partials/_modules.scss */
+  .timeline li + li {
+    margin-left: -2px;
+  }
+  /* line 362, ../sass/partials/_modules.scss */
+  .timeline li + li .label {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  /* line 366, ../sass/partials/_modules.scss */
+  .timeline .datum {
+    margin-left: 0;
+  }
+  /* line 369, ../sass/partials/_modules.scss */
+  .timeline .datum a {
+    border-radius: 5px 5px 2px 2px;
+    text-align: center;
+    padding: 0;
+  }
+  /* line 374, ../sass/partials/_modules.scss */
+  .timeline .datum a:hover {
+    cursor: pointer;
+    text-indent: 0;
+  }
+  /* line 380, ../sass/partials/_modules.scss */
+  .timeline .datum span {
+    margin-top: 1em;
+  }
+  /* line 383, ../sass/partials/_modules.scss */
+  .timeline .label {
+    clear: both;
+    display: block;
+    position: static;
+    text-align: center;
+    margin: 1em 0 0 -4px;
+    padding: 0 7px;
+  }
+}
+@media all and (min-width: 45em) {
+  /* line 295, ../sass/partials/_modules.scss */
+  .timeline {
+    width: 34.5em;
+  }
+  /* line 396, ../sass/partials/_modules.scss */
+  .timeline li {
+    width: 45px;
+  }
+  /* line 399, ../sass/partials/_modules.scss */
+  .timeline li + li {
+    margin-left: 0;
+  }
+  /* line 403, ../sass/partials/_modules.scss */
+  .timeline .datum a {
+    position: relative;
+    overflow: hidden;
+  }
+  /* line 407, ../sass/partials/_modules.scss */
+  .timeline .datum a:hover span {
+    top: 10px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+  }
+  /* line 413, ../sass/partials/_modules.scss */
+  .timeline .datum a span {
+    position: absolute;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    opacity: 0;
+    top: 3em;
+    margin-top: 0;
+    /*left: -999em; */
+    left: 10%;
+    font-size: 2.5em;
+    text-shadow: -1px -1px 1px rgba(200, 200, 200, 0.6);
+    letter-spacing: -4px;
+    -webkit-transition: 300ms opacity ease-out, 450ms top ease-out;
+    -moz-transition: 300ms opacity ease-out, 450ms top ease-out;
+    -o-transition: 300ms opacity ease-out, 450ms top ease-out;
+    transition: 300ms opacity ease-out, 450ms top ease-out;
+  }
+  /* line 432, ../sass/partials/_modules.scss */
+  .timeline .label {
+    padding: 0 10px;
+  }
+}
+@media all and (min-width: 60em) {
+  /* line 295, ../sass/partials/_modules.scss */
+  .timeline {
+    width: 42.5em;
+  }
+  /* line 438, ../sass/partials/_modules.scss */
+  .timeline li {
+    width: 57px;
+  }
+  /* line 440, ../sass/partials/_modules.scss */
+  .timeline .datum a span {
+    left: 17%;
+  }
+}
+
+/* line 470, ../sass/partials/_modules.scss */
+.player {
+  bottom: -5em;
+  position: fixed;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.8);
+  border-top-color: #efefef;
+  border-top: 1px solid rgba(150, 150, 150, 0.1);
+  box-shadow: 0 0 20px rgba(150, 150, 150, 0.1);
+  line-height: 1.4;
+  width: 100%;
+  padding-bottom: 7.5px;
+  -webkit-transition: 300ms ease bottom;
+  -moz-transition: 300ms ease bottom;
+  -o-transition: 300ms ease bottom;
+  transition: 300ms ease bottom;
+}
+/* line 483, ../sass/partials/_modules.scss */
+.player object {
+  position: absolute;
+}
+/* line 485, ../sass/partials/_modules.scss */
+.player .inner {
+  padding: 0;
+  position: relative;
+}
+/* line 490, ../sass/partials/_modules.scss */
+.player .a-close {
+  color: #cccccc;
+  color: rgba(50, 50, 50, 0.2);
+  top: 7.5px;
+  right: 0;
+}
+/* line 496, ../sass/partials/_modules.scss */
+.player .a-close:hover:before {
+  color: #6c858c;
+  color: rgba(0, 0, 0, 0.4);
+}
+/* line 502, ../sass/partials/_modules.scss */
+.player .loading {
+  font-size: 1.25em;
+  padding-top: 7.5px;
+  margin-bottom: -15px;
+  position: absolute;
+  right: 40px;
+}
+/* line 510, ../sass/partials/_modules.scss */
+.player .null {
+  font-weight: 700;
+}
+/* line 515, ../sass/partials/_modules.scss */
+.player .meta,
+.player .null {
+  margin: 0 60px 0 30px;
+  padding-top: 7.5px;
+}
+/* line 520, ../sass/partials/_modules.scss */
+.player .indicator {
+  position: relative;
+  float: left;
+  width: 12px;
+  height: 12px;
+  margin-top: -2px;
+  -webkit-animation: infinite pulsate 1s ease-out;
+  -moz-animation: infinite pulsate 1s ease-out;
+  -o-animation: infinite pulsate 1s ease-out;
+  animation: infinite pulsate 1s ease-out;
+}
+/* line 528, ../sass/partials/_modules.scss */
+.player .indicator span:before {
+  font-family: 'WebSymbolsRegular';
+  color: #f05f3e;
+  content: 'N';
+  font-size: 1em;
+  position: absolute;
+  padding: 10px 2px 0 0;
+}
+@media all and (min-width: 30em) {
+  /* line 470, ../sass/partials/_modules.scss */
+  .player {
+    width: 370px;
+    padding: 0 1em 0.5em 1em;
+    border-radius: 10px 10px 0 0;
+    padding: 0 1em 0.5em 1em;
+    border: 1px solid rgba(50, 50, 50, 0.2);
+    right: 20px;
+    box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.2);
+  }
+  /* line 547, ../sass/partials/_modules.scss */
+  .player .inner {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes pulsate {
+  /* line 553, ../sass/partials/_modules.scss */
+  0% {
+    -webkit-transform: scale(1, 1);
+    -webkit-transform-origin: center bottom;
+  }
+
+  /* line 557, ../sass/partials/_modules.scss */
+  50% {
+    -webkit-transform: scale(0.8, 0.8);
+    -webkit-transform-origin: center bottom;
+  }
+
+  /* line 561, ../sass/partials/_modules.scss */
+  100% {
+    -webkit-transform: scale(1, 1);
+    -webkit-transform-origin: center bottom;
+  }
+}
+
+@-moz-keyframes pulsate {
+  /* line 568, ../sass/partials/_modules.scss */
+  0% {
+    -moz-transform: scale(1, 1);
+    -moz-transform-origin: center bottom;
+  }
+
+  /* line 572, ../sass/partials/_modules.scss */
+  50% {
+    -moz-transform: scale(0.8, 0.8);
+    -moz-transform-origin: center bottom;
+  }
+
+  /* line 576, ../sass/partials/_modules.scss */
+  100% {
+    -moz-transform: scale(1, 1);
+    -moz-transform-origin: center bottom;
+  }
+}
+
+@-o-keyframes pulsate {
+  /* line 583, ../sass/partials/_modules.scss */
+  0% {
+    -o-transform: scale(1, 1);
+    -o-transform-origin: center bottom;
+  }
+
+  /* line 587, ../sass/partials/_modules.scss */
+  50% {
+    -o-transform: scale(0.8, 0.8);
+    -o-transform-origin: center bottom;
+  }
+
+  /* line 591, ../sass/partials/_modules.scss */
+  100% {
+    -o-transform: scale(1, 1);
+    -o-transform-origin: center bottom;
+  }
+}
+
+@-keyframes pulsate {
+  /* line 598, ../sass/partials/_modules.scss */
+  0% {
+    transform: scale(1, 1);
+    transform-origin: center bottom;
+  }
+
+  /* line 602, ../sass/partials/_modules.scss */
+  50% {
+    transform: scale(0.8, 0.8);
+    transform-origin: center bottom;
+  }
+
+  /* line 606, ../sass/partials/_modules.scss */
+  100% {
+    transform: scale(1, 1);
+    transform-origin: center bottom;
+  }
+}
+
+/* line 613, ../sass/partials/_modules.scss */
+#b-about,
+#b-about .inner {
+  display: none;
+}
+
+/* line 4, ../sass/partials/_forks.scss */
+.no-touch .items-songs a.active,
+.no-touch .items-songs a.available:hover {
+  cursor: pointer;
+  border-color: #cccccc;
+  border-color: rgba(50, 50, 50, 0.2);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.66);
+  box-shadow: inset 0 0 20px rgba(50, 50, 50, 0.2);
+}
+/* line 12, ../sass/partials/_forks.scss */
+.no-touch .items-songs a.active {
+  border-color: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);
+}

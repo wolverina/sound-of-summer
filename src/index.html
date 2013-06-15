@@ -9,12 +9,12 @@
         <meta name="viewport" content="width=device-width">
         <meta name="author" content="Chloe Weil">
         
-        <link rel="stylesheet" href="./assets/css/global.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
         <!-- It's that important -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="./assets/js/jquery-1.9.1.js"><\/script>')</script>
 
-        <script src="./assets/js/main.min.js"></script>
+        <script src="./assets/js/bundle/main.js"></script>
 
         <script src="http://use.typekit.com/rxq7kzd.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
@@ -23,82 +23,44 @@
     </head>
 
     <body>
-        <header class="global-header" role="banner">
+        <header class="g-header" role="banner">
             <div class="inner">
-                <h1 class="headline"><a href="../">Sound of Summer</a></h1>
-                <a href="../about.html" id="js-trigger-about" class="resource">About</a>
+                <h1 class="hdr-headline"><a href="../">Sound of Summer</a></h1>
+                <a href="#" id="js-about" class="resource">About</a>
             </div>
         </header>
 
-        <section class="accent pane" id="about">
-            <h2 class="accessibility">About This Project</h2>
-            <dl class="inner">
-                <dt class="tert-head">About <em>Sound of Summer</em></dt>
-                <dd><em>Sound of Summer</em> is a personal project exploring past summers I've experienced through the music I listened to. For over ten years I've been <a href="http://chloeweil.com/blog/i-can-tell-you-how-i-got-from-deep-purple-to-howling-wolf-in-just-25-moves/">tagging songs in my iTunes library</a> with the year and the season that I listened to them. I came up with the idea for this project while walking over a bridge shortly before I was <a href="https://twitter.com/secretmildred/status/206070225823731713" rel="me external">attacked</a> <a href="https://twitter.com/secretmildred/status/208449798376914945" rel="me external">by</a> <a href="https://twitter.com/secretmildred/status/209692192569180160" rel="me external">a</a> <a href="https://twitter.com/secretmildred/status/210078117405016064" rel="me external">crow</a>. Select songs are available to stream through <a href="http://rdio.com" rel="external">Rdio</a>.</dd>
+        <section class="b-accent" id="b-about">
+            <div class="inner">
+                <h2 class="hdr-title">About <em>Sound of Summer</em></h2>
+                
+                <p><em>Sound of Summer</em> is a personal project exploring past summers I've experienced through the music I listened to. For over ten years I've been <a href="http://chloeweil.com/blog/i-can-tell-you-how-i-got-from-deep-purple-to-howling-wolf-in-just-25-moves/">tagging songs in my iTunes library</a> with the year and the season that I listened to them. I came up with the idea for this project while walking over a bridge shortly before I was <a href="https://twitter.com/secretmildred/status/206070225823731713" rel="me external">attacked</a> <a href="https://twitter.com/secretmildred/status/208449798376914945" rel="me external">by</a> <a href="https://twitter.com/secretmildred/status/209692192569180160" rel="me external">a</a> <a href="https://twitter.com/secretmildred/status/210078117405016064" rel="me external">crow</a>. Select songs are available to stream through <a href="http://rdio.com" rel="external">Rdio</a>.</p>
 
-                <dt class="tert-head">About Me</dt>
-                <dd class="no-padding">My name is Chloe and I'm an emotional web developer living in Portland, Oregon. This is my first Rails adventure and oh my god it was so much fun. I have <a href="http://chloeweil.com" rel="me external">too many hobbies</a> and a <a href="http://gobarbra.com/hit/new-ee39fb3e22edf5a1cedb4df521aa99dc" rel="external">cat named <abbr title="Feline Awesome Cat Extreme">FACE</abbr></a>.</dd>
-            </dl>
+                <h2 class="hdr-title">About Me</h2>
+                <p>My name is Chloe and I'm an emotional web developer living in Portland, Oregon. I have <a href="http://chloeweil.com" rel="me external">too many hobbies</a> and a <a href="http://gobarbra.com/hit/new-ee39fb3e22edf5a1cedb4df521aa99dc" rel="external">cat named <abbr title="Feline Awesome Cat Extreme">FACE</abbr></a>.</p>
+            </div>
         </section>
 
         <div class="inner">
-        <p class="subhead">I'm vulnerable to rich emotional experiences in the summertime. The associated emotions get encoded into the music I listen to during that season.</p>
-        </div>
-
-        <nav class="inner timeline-wrap">
-            <!--
-                I know this is totally a table and I'm not even the type to shun tables simply because I remember the horrors of the '90s,      
-                but it was impossible to style in a cross-browser way. 
-            -->
-            <ol class="timeline no-pre" role="navigation">
+            <p class="hdr-subhead">I'm vulnerable to rich emotional experiences in the summertime. The associated emotions get encoded into the music I listen to during that season.</p>
             
-                <% @events.each do |event| %>
-                <li>
-                    <div class="datum">
-                        <%= link_to(event, 'data-song-count' => event.songs.count, 'data-year' => event.date) do %>
-                            <span><%= event.songs.count %></span>
-                        <% end %>
-                    </div>
-                    <div class="label">
-                        <%= event.date %>
-                    <% if admin? %>
-                        <ul class="no-pre">
-                            <li><%= link_to 'View', event %></li>
-                            <li><%= link_to 'Edit', edit_event_path(event) %></li>
-                            <li><%= link_to 'Del', event, :confirm => 'Are you sure?', :method => :delete %></li>
-                        </ul>
-                    <% end %>
-                    </div>
-                </li>
-                <% end %>
-                <li class="loading"></li>
-            </ol>
-            <% if admin? %>
-                <%= link_to 'New Event', new_event_path %>
-            <% end %>
-        </nav>
+            <nav class="timeline-wrap">
+                <!--
+                    I know this is totally a table and I'm not even the type to shun tables simply because I remember the horrors of the '90s,      
+                    but it was impossible to style in a cross-browser way. 
+                -->
+                <ol class="timeline" role="navigation" id="js-timeline"></ol>
+            </nav>
+        </div>
+        
+        <article role="main" id="js-content"></article>
 
-
-
-
-
-        <footer role="contentinfo" class="global-footer inner">
+        <footer role="contentinfo" class="g-footer inner">
             <small class="colophon">Created by <a href="http://chloeweil.com" rel="me">Chloe Weil</a> in 2012.</small>
-            <a class="icon top" href="#"><span class="accessibility">Top</span></a>
+            <a class="icon a-top" href="#" id="js-top"><span class="accessibility">Top</span></a>
         </footer>
     
-        <script type="text/javascript" charset="utf-8">
-          window.twttr = (function (d,s,id) {
-            var t, js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
-            js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-            return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-          }(document, "script", "twitter-wjs"));
-        </script>
-
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-        <script type="text/javascript">
+        <script>
         var sc_project=8026493; 
         var sc_invisible=1; 
         var sc_security="62f31935"; 

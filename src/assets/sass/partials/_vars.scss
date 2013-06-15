@@ -26,3 +26,7 @@ $time-default: 300ms;
 $media-sm: 30em;
 $media-md: 45em;
 $media-lg: 60em;
+
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 1em;
+}
