@@ -1,7 +1,7 @@
 .no-touch {
 	.items-songs {
 		a.is-active,
-		a.is-available:hover {
+		a:hover {
 			cursor: pointer;
 			border-color: $color-neutral-hex;
 			border-color: $color-neutral;

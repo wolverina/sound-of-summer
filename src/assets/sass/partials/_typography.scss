@@ -1,11 +1,12 @@
 .hdr-headline {
-	font-size: 2.8em;
-	line-height: .9;
+	$font-local: 45px;
+
+	font-size: calc-em($font-local, $font-base);
+	line-height: calc-em(40px, $font-local);
 	font-weight: 800;
+	margin-bottom: calc-em(20px, $font-local);
 	text-shadow: -1px -1px 1px #cfcfcf;
 	font-style: italic; 
-	float: left;
-	width: 85%;
 		
 	a {
 		color: #fff;
@@ -14,11 +15,13 @@
 }
 
 .hdr-subhead {
-	font-size: 2em;
-	line-height: 1.3;
+	$font-local: 32px;
+
+	font-size: calc-em($font-local, $font-base);
+	line-height: calc-em(38px, $font-local);
 	letter-spacing: -1px;
 	font-weight: 300;
-	margin: 0;
+	margin-bottom: 0;
 	color: $color-body-hex;
 	color: $color-body;
 }
@@ -33,7 +36,11 @@
   left: -999em; 
 }
 
-.colophon { font-size: 1em; }
+.colophon { 
+	font-size: calc-em(16px, $font-base); 
+	margin-bottom: 1em;
+	display: block;
+}
 
 .term { 
 	font-weight: 700; 

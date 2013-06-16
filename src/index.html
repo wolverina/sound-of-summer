@@ -21,6 +21,7 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="./assets/js/jquery-1.9.1.js"><\/script>')</script>
         <script src="./assets/js/modernizr.js"></script>
+        <script src="./assets/js/bundle/spin.js"></script>
         <script src="./assets/js/bundle/main.js"></script>
         <script src="http://use.typekit.com/rxq7kzd.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
@@ -45,8 +46,10 @@
                 <p>My name is Chloe and I'm an emotional web developer living in Portland, Oregon. I have <a href="http://chloeweil.com" rel="me external">too many hobbies</a> and a <a href="http://gobarbra.com/hit/new-ee39fb3e22edf5a1cedb4df521aa99dc" rel="external">cat named <abbr title="Feline Awesome Cat Extreme">FACE</abbr></a>.</p>
             </div>
         </section>
-
-            <p class="hdr-subhead inner">I'm vulnerable to rich emotional experiences in the summertime. The associated emotions get encoded into the music I listen to during that season.</p>
+        
+        <div class="inner">
+            <p class="hdr-subhead">I'm vulnerable to rich emotional experiences in the summertime. The associated emotions get encoded into the music I listen to during that season.</p>
+        </div>
 
         <nav class="timeline-wrap">
             <!--
@@ -59,9 +62,22 @@
 
         <article role="main" id="js-content"></article>
 
-        <footer role="contentinfo" class="g-footer inner">
+        <div class="b-player" role="application" id="js-player">
+            <div class="inner">
+                <div class="indicator icon-icn-love">
+                    <span id="indicator"></span>
+                </div>
+
+                <div class="meta">
+                    <span class="term"></span>
+                    <span class="artist"></span>
+                </div>
+            </div>
+        </div>
+
+        <footer role="contentinfo" class="inner">
             <small class="colophon">Created by <a href="http://chloeweil.com" rel="me">Chloe Weil</a> in 2012.</small>
-            <a class="icon icon-icn-up a-top" href="#" id="js-top"><span>Top</span></a>
+            <a class="a-top" href="#" id="js-top"><span class="icon icon-icn-up"><span>Top</span></span></a>
         </footer>
         <script src="//www.rdio.com/api/api.js?helper=helper.html&client_id=03s13GFb7kRDpML4gfUWSA"></script>
     
