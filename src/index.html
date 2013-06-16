@@ -46,7 +46,7 @@
                 <p>My name is Chloe and I'm an emotional web developer living in Portland, Oregon. I have <a href="http://chloeweil.com" rel="me external">too many hobbies</a> and a <a href="http://gobarbra.com/hit/new-ee39fb3e22edf5a1cedb4df521aa99dc" rel="external">cat named <abbr title="Feline Awesome Cat Extreme">FACE</abbr></a>.</p>
             </div>
         </section>
-        
+
         <div class="inner">
             <p class="hdr-subhead">I'm vulnerable to rich emotional experiences in the summertime. The associated emotions get encoded into the music I listen to during that season.</p>
         </div>
@@ -56,7 +56,12 @@
                 I know this is totally a table and I'm not even the type to shun tables simply because I remember the horrors of the '90s,      
                 but it was impossible to style in a cross-browser way. 
             -->
+
             <ol class="timeline" role="navigation" id="js-timeline"></ol>
+            <noscript>
+                <p class="message">Sorry, Sound of Summer requires JavaScript.</p>
+            </noscript>
+
         </nav>
         
 
@@ -64,11 +69,8 @@
 
         <div class="b-player" role="application" id="js-player">
             <div class="inner">
-                <div class="indicator icon-icn-love">
-                    <span id="indicator"></span>
-                </div>
-
                 <div class="meta">
+                    <div class="indicator icon-icn-love"></div>
                     <span class="term"></span>
                     <span class="artist"></span>
                 </div>

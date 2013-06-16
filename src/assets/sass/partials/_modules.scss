@@ -1,6 +1,7 @@
 .inner {
 	margin: 0 auto;
 	padding: $unit-v 7.5%;
+	max-width: 1000px;
 	@include pie-clearfix;
 
 	@media all and (min-width: $media-sm) {		
@@ -217,6 +218,7 @@
 	background-color: $color-relief-hex;
 	background-color: $color-relief;
 	margin: $unit-h 7.5%;
+
   @include transition($time-default ease-out width);
 
   @media all and (min-width: $media-sm) {
@@ -229,7 +231,8 @@
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
-	
+	min-height: 120px;
+
 	li { 
 		position: relative; 
 		padding: .15em 0;
@@ -366,29 +369,20 @@
 }
 
 .b-content {	
+  @media all and (min-width: $media-md) {
+  	@include pie-clearfix;
 
-	// @media all and (min-width: $media-sm) {  
- //    .hdr-headline { 
- //      float: left; 
- //      margin-right: $unit-h; 
- //      width: 22.5%;
- //    }
+		.col {
+			display: inline-block;
+			float: left;
 
- //    .hdr-subhead { 
- //      float: left; 
- //      width: 72%; 
- //    }
- //  }
+			&:last-child { 
+				margin-left: $unit-h;
+				width: 78%; 
+			}
+		}
+  }
 
- //  @media all and (min-width: $media-md) {
- //    .hdr-headline { width: 15%; }
- //    .hdr-subhead { width: 82%; }  
- //  }
-
- //  @media all and (min-width: $media-lg) { 
- //    .hdr-headline { width: 11%; }
- //    .hdr-subhead { width: 86%; }
- //  }
 }
 
 .b-player {
@@ -402,8 +396,11 @@
 	box-shadow: 0 0 $unit-h $color-neutral-lite;
 	width: 100%;
 	padding: 0;
+	min-height: 36px;
 	@include transition($time-default ease bottom);
 	
+	p { margin: 0; }
+
 	.inner { position: relative; }
 
 	.a-close {
@@ -413,7 +410,6 @@
 	
 	.indicator {
 		position: relative;
-		display: none;
 		float: left;
 		margin-right: $unit-h/2;
 		margin-left: -$unit-h/2;
@@ -423,10 +419,12 @@
 	.meta { 
 		display: none;
 		line-height: 1; 
+		margin-top: 3px;
+		margin-right: $unit-h;
 	}
 
   @media all and (min-width: $media-sm) {
-    width: 50%;
+    width: 35%;
     border-radius: 10px 10px 0 0;
     border: 1px solid $color-neutral;
     right: $unit-h;

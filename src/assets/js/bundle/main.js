@@ -72,16 +72,18 @@ var Summer = {
 		}
 
         size = window.getComputedStyle(document.body,':after').getPropertyValue('content'),
-        $timeline = $('#js-timeline');
-      
+        $timeline = $('#js-timeline'),
+        $player = $('#js-player'),
+        $songs = $('#js-songs');
+      	
+      	$timeline.spin(Summer.opts.spinLg);
+
         $.getJSON('assets/data/data.json', function(data) {
         	var arr = [];
 
             $.each(data, function(key, val) {
                 Summer.data = val;
             });
-
-            //Summer.data.count = [];
 
 	        $.each(Summer.data.songs, function(i, val) {
 	            if (this.event_id instanceof Array) {
@@ -98,6 +100,7 @@ var Summer = {
 	        Summer.data.count = arrFrequency(arr);
 	        
             Summer.timeline.init();
+            Summer.player.init();
            	Summer.timeline.orient();
 
         });
@@ -110,12 +113,12 @@ var Summer = {
 
 			Summer.timeline.orient();
 		}
-
-
 	},
 
 	'timeline': {
 		init: function(){
+			$timeline.spin(false);
+
 			$.each(Summer.data.events, function(i){
 	            $timeline.append(
 	            	'<li>'
@@ -296,15 +299,17 @@ var Summer = {
 		  		'backgroundColor': 'rgba('+ r +','+ g +','+ b +','+ a +')'
 		  	});
 		});
-
-		Summer.player.init();
-			
+	
 		$songs.find('a').on('click', function(e){
 			var $self = $(this),
 				artist = $self.find('.def').text(), 
 				title = $self.find('.term').text();
 
 			Summer.song(artist, title);
+			
+			$songs.find('a').removeClass('is-active');
+			$self.addClass('is-active');
+
 			e.preventDefault();
 		});
 
@@ -315,8 +320,7 @@ var Summer = {
 	},
 
 	song: function(artist, title, src){
-		var $player = $('#js-player');
-
+	
 		$player
 			.find('.inner')
 			.spin(Summer.opts.spinSm)
@@ -337,6 +341,8 @@ var Summer = {
 		}).done(function(data){
 			if (data.response.songs[0]) {
 				var bpm = data.response.songs[0].audio_summary.tempo;
+			} else {
+				var bpm = 70; //moderato
 			}
 			
 			R.request({
@@ -345,47 +351,64 @@ var Summer = {
 					query: title+' '+artist,
 					types: 'Track',
 					start: 0,
-					count: 1
+					never_or: true,
+					count: 1,
+					extras: 'streamRegions'
 				},
 
 				success: function(response) {
-					var src = response.result.results[0].key;
+					console.log(response.result);
+					if (response.result.number_results != 0){
 
-					Summer.player.play(artist, title, src);
+						var src = response.result.results[0].key;
+
+						Summer.player.play(artist, title, src, bpm);
+
+					} else {
+						Summer.player.fail();
+					}
 				},
 
 				error: function(response) {
 					console.log("error: " + response.message);
 				}
 			});
+
 		});
 	},
 
 	player: {
 		init: function(){
-			var $player = $('#js-player');
 
 			$player
 				.find('.inner')
-				.spin(Summer.opts.spinSm)
 				.end()
 				.append(Summer.nodes.close)
 				.find('.a-close').on('click', function(e){
 					$player
-						.fadeOut()
-						.find('.meta, .indicator')
-						.hide();
-
+						.fadeOut(function(){
+							$(this).find('.meta')
+							.hide();
+						});
+					
 					R.player.pause();
+
+					$('#js-songs').find('a').removeClass('is-active');
+
 					e.preventDefault();	
 				});
 		},
 
 		play: function(artist, title, src, bpm){
-			var $player = $('#js-player');
+
+			$player
+				.find('.inner')
+				.spin(Summer.opts.spinSm)
+				.find('.meta')
+				.hide();
 
 			R.ready(function() {
-
+			
 				var $indicator = $('.indicator');
 			
 				if (bpm > 140) { //vivace
@@ -394,33 +417,36 @@ var Summer = {
 				} else {
 					var period = (bpm/120);
 				}
+				
+				R.player.play({source: src});
 
-				$indicator.css({
-					'-webkit-animation-duration': 1/period+'s',
-					'-moz-animation-duration': 1/period+'s',
-					'-ms-animation-duration': 1/period+'s',
-					'animation-duration': 1/period+'s'
-				});
-
-				$player
-					.find('.meta, .indicator')
-					.hide()
-					.end()
-					.find('.inner')
+				$player							
+            		.find('.inner')
 					.spin(false)
-					.end()
+
 					.find('.term')
 			 		.html(title)
 			 		.end()
 			 		.find('.artist')
 			 		.html(artist)
 			 		.end()
-			 		.find('.meta, .indicator')
+			 		.find('.meta')
 			 		.fadeIn();
-			 	
-			 	R.player.play({source: src});
-
+					
+			 	$indicator.css({
+					'-webkit-animation-duration': 1/period+'s',
+					'-moz-animation-duration': 1/period+'s',
+					'-ms-animation-duration': 1/period+'s',
+					'animation-duration': 1/period+'s'
+				});
 			});
+		},
+
+		fail: function(){
+			$player
+				.find('.inner')
+				.spin(false)
+				.html('<p id="js-player-error"><span class="icon-icn-locked"></span>This track is not available.</p>');
 		}
 	}
 }
