@@ -8,7 +8,49 @@ var Summer = {
 	},
 
 	'nodes': {
-		'close': '<a href="#" title="Close" class="icon icon-icn-close a-close"><span>Close</span></a>'
+		'close': '<a href="#" title="Close" class="icon icon-icn-close a-close"><span>Close</span></a>',
+		'closeAlt': '<a href="#" title="Close" class="icon icon-icn-close-alt a-close"><span>Close</span></a>',
+		'spin': '<div class="loading"></div>'
+	},
+
+	'opts': {
+		'spinLg': {
+			lines: 7, // The number of lines to draw
+			length: 15, // The length of each line
+			width: 16, // The line thickness
+			radius: 28, // The radius of the inner circle
+			corners: 0, // Corner roundness (0..1)
+			rotate: 0, // The rotation offset
+			direction: 1, // 1: clockwise, -1: counterclockwise
+			color: '#8f999b', // #rgb or #rrggbb
+			speed: 1.4, // Rounds per second
+			trail: 79, // Afterglow percentage
+			shadow: false, // Whether to render a shadow
+			hwaccel: false, // Whether to use hardware acceleration
+			className: 'spinner', // The CSS class to assign to the spinner
+			zIndex: 2e9, // The z-index (defaults to 2000000000)
+			top: 'auto', // Top position relative to parent in px
+			left: 'auto' // Left position relative to parent in px
+		},
+
+		'spinSm': {
+			lines: 7, // The number of lines to draw
+			length: 4, // The length of each line
+			width: 4, // The line thickness
+			radius: 7, // The radius of the inner circle
+			corners: 0, // Corner roundness (0..1)
+			rotate: 0, // The rotation offset
+			direction: 1, // 1: clockwise, -1: counterclockwise
+			color: '#8f999b', // #rgb or #rrggbb
+			speed: 1.4, // Rounds per second
+			trail: 79, // Afterglow percentage
+			shadow: false, // Whether to render a shadow
+			hwaccel: false, // Whether to use hardware acceleration
+			className: 'spinner', // The CSS class to assign to the spinner
+			zIndex: 2e9, // The z-index (defaults to 2000000000)
+			top: 'auto', // Top position relative to parent in px
+			left: 'auto' // Left position relative to parent in px
+		}
 	},
 
 	init: function(){
@@ -94,9 +136,18 @@ var Summer = {
         	});
 
 			$timeline.find('a').on('click', function(e){
-				var year = $(this).data('year').toString();
+				var $self = $(this),
+					year = $(this).data('year').toString();
         		
+        		$timeline.spin(Summer.opts.spinLg);
+
         		$('#js-content').html('').load('_content.html', function(){
+        			$timeline
+        				.spin(false)
+        				.find('a')
+        				.removeClass('is-active');
+
+        			$self.addClass('is-active');
         			
         			Summer.event(year, function(){
         				scrollTo('#js-content');
@@ -203,7 +254,8 @@ var Summer = {
 					+'<img src="http://maps.googleapis.com/maps/api/staticmap?center='
 					+this.location
 					+'&zoom=15&size=430x200&sensor=false">'
-					+'<div class="caption icon locality">'
+					+'<div class="caption">'
+					+'<span class="icon icon-icn-location"></span>'
 					+this.name
 					+'</div>'
 					+'</li>'			
@@ -217,7 +269,7 @@ var Summer = {
 				
 				$songs.append(
 					'<li>'
-					+'<a href="#" data-rdio="">'
+					+'<a href="#">'
 					+'<span class="term">'
 					+this.title
 					+'</span>'
@@ -234,30 +286,7 @@ var Summer = {
 		$.each($songs.find('a'), function(i) {
 			var $self = $(this),
 				artist = $self.find('.def').text(), 
-				title = $self.find('.term').text();
-
-			R.request({
-				method: 'search',
-					content: {
-					query: title+' '+artist,
-					types: 'Track',
-					start: 0,
-					count: 1
-				},
-
-				success: function(response) {
-					$self
-					.attr('data-rdio', response.result.results[0].key)
-					.addClass('is-available')
-					.prepend('<span class="icon icon-icn-music"></span>');
-				},
-
-				error: function(response) {
-					console.log("error: " + response.message);
-				}
-			});
-
-			var $self = $(this),
+				title = $self.find('.term').text(),
 				r = Math.round(20+i),
 				g = Math.round(i * 2.25),
 				b = Math.round((10+i) * 2),
@@ -267,15 +296,15 @@ var Summer = {
 		  		'backgroundColor': 'rgba('+ r +','+ g +','+ b +','+ a +')'
 		  	});
 		});
+
+		Summer.player.init();
 			
 		$songs.find('a').on('click', function(e){
 			var $self = $(this),
 				artist = $self.find('.def').text(), 
-				title = $self.find('.term').text(),
-				rdio = $self.data('rdio');
+				title = $self.find('.term').text();
 
-			Summer.song(artist, title, rdio);
-
+			Summer.song(artist, title);
 			e.preventDefault();
 		});
 
@@ -285,8 +314,15 @@ var Summer = {
 		callback();
 	},
 
-	song: function(artist, title, rdio){
-		
+	song: function(artist, title, src){
+		var $player = $('#js-player');
+
+		$player
+			.find('.inner')
+			.spin(Summer.opts.spinSm)
+			.end()
+			.fadeIn();
+
 		$.ajax({
 			url: "http://developer.echonest.com/api/v4/song/search?",
 			dataType: "jsonp",
@@ -299,37 +335,93 @@ var Summer = {
 				title: title
 			}
 		}).done(function(data){
-			Summer.player(rdio);
-
-			var bpm = data.response.songs[0].audio_summary.tempo,
-				$indicator = $('.indicator');
-			
-			$indicator.show();
-
-			if (bpm > 140) { //vivace
-				var period = (bpm/60);
-
-			} else {
-				var period = (bpm/120);
+			if (data.response.songs[0]) {
+				var bpm = data.response.songs[0].audio_summary.tempo;
 			}
+			
+			R.request({
+				method: 'search',
+					content: {
+					query: title+' '+artist,
+					types: 'Track',
+					start: 0,
+					count: 1
+				},
 
-			$indicator.css({
-				'-webkit-animation-duration': 1/period+'s',
-				'-moz-animation-duration': 1/period+'s',
-				'-ms-animation-duration': 1/period+'s',
-				'animation-duration': 1/period+'s'
+				success: function(response) {
+					var src = response.result.results[0].key;
+
+					Summer.player.play(artist, title, src);
+				},
+
+				error: function(response) {
+					console.log("error: " + response.message);
+				}
 			});
 		});
 	},
 
-	player: function(src){
-		var $player = $('#js-player');
+	player: {
+		init: function(){
+			var $player = $('#js-player');
 
-		R.ready(function() {
-			$player.fadeIn();
-			console.log(src);
-		 	R.player.play({source: src});
-		});
+			$player
+				.find('.inner')
+				.spin(Summer.opts.spinSm)
+				.end()
+				.append(Summer.nodes.close)
+				.find('.a-close').on('click', function(e){
+					$player
+						.fadeOut()
+						.find('.meta, .indicator')
+						.hide();
+
+					R.player.pause();
+					e.preventDefault();	
+				});
+		},
+
+		play: function(artist, title, src, bpm){
+			var $player = $('#js-player');
+
+			R.ready(function() {
+
+				var $indicator = $('.indicator');
+			
+				if (bpm > 140) { //vivace
+					var period = (bpm/60);
+
+				} else {
+					var period = (bpm/120);
+				}
+
+				$indicator.css({
+					'-webkit-animation-duration': 1/period+'s',
+					'-moz-animation-duration': 1/period+'s',
+					'-ms-animation-duration': 1/period+'s',
+					'animation-duration': 1/period+'s'
+				});
+
+				$player
+					.find('.meta, .indicator')
+					.hide()
+					.end()
+					.find('.inner')
+					.spin(false)
+					.end()
+					.find('.term')
+			 		.html(title)
+			 		.end()
+			 		.find('.artist')
+			 		.html(artist)
+			 		.end()
+			 		.find('.meta, .indicator')
+			 		.fadeIn();
+			 	
+			 	R.player.play({source: src});
+
+			});
+		}
 	}
 }
 
@@ -354,20 +446,20 @@ function triggaPane(trigger, container){
 
 	var inner = container.find('.inner');
 
-	container.append(Summer.nodes.close);
+	container
+		.append(Summer.nodes.closeAlt)
+		.find('.a-close').on('click', function(e){
+			container.slideToggle(500);
+			inner.fadeToggle(500);	
+
+			e.preventDefault();	
+		});
 	
 	trigger.on('click', function(e){	
 		inner.fadeToggle(500);
 		container.slideToggle(500);
 
 		e.preventDefault();
-	});
-	
-	container.on(Summer.nodes.close, 'click', function(e){
-		container.slideToggle(500);
-		inner.fadeToggle(500);	
-
-		e.preventDefault();	
 	});
 }
 
