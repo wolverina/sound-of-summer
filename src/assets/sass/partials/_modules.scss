@@ -402,10 +402,13 @@
 	min-height: 36px;
 	@include transition($time-default ease bottom);
 	
-	.inner { position: relative; }
+	.inner { 
+		padding: $unit-v 7.5%;
+		position: relative; 
+	}
 
 	.a-close {
-		top: 17px;
+		top: 13px;
 		right: $unit-h/2;
 	}
 	
