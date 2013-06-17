@@ -359,7 +359,6 @@ var Summer = {
 				},
 
 				success: function(response) {
-					console.log(response.result);
 					if (response.result.number_results != 0){
 
 						var src = response.result.results[0].key;
@@ -367,7 +366,7 @@ var Summer = {
 						Summer.player.play(artist, title, src, bpm);
 
 					} else {
-						Summer.player.fail();
+						Summer.player.fail(title);
 					}
 				},
 
@@ -456,7 +455,7 @@ var Summer = {
 			});
 		},
 
-		fail: function(){
+		fail: function(title){
 			$player
 				.find('.inner')
 				.spin(false)
@@ -464,7 +463,7 @@ var Summer = {
 				.hide()
 				.end()
 				.find('.alert')
-				.html('<span class="icon icon-icn-locked"></span>This track is not available.')
+				.html('<span class="icon icon-icn-locked"></span><span class="term">'+title+'</span> is not available.')
                 .show();
 		}
 	}
