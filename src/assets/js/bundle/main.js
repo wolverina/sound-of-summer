@@ -17,11 +17,11 @@ var Summer = {
     'time': 500,
 
     'spinLg': {
-      lines: 7, // The number of lines to draw
+      lines: 6, // The number of lines to draw
       length: 15, // The length of each line
-      width: 16, // The line thickness
+      width: 14, // The line thickness
       radius: 28, // The radius of the inner circle
-      corners: 0, // Corner roundness (0..1)
+      corners: .5, // Corner roundness (0..1)
       rotate: 0, // The rotation offset
       direction: 1, // 1: clockwise, -1: counterclockwise
       color: '#444', // #rgb or #rrggbb
@@ -40,7 +40,7 @@ var Summer = {
       length: 3, // The length of each line
       width: 3, // The line thickness
       radius: 5, // The radius of the inner circle
-      corners: 0, // Corner roundness (0..1)
+      corners: .5, // Corner roundness (0..1)
       rotate: 0, // The rotation offset
       direction: 1, // 1: clockwise, -1: counterclockwise
       color: '#8f999b', // #rgb or #rrggbb
@@ -51,7 +51,7 @@ var Summer = {
       className: 'spinner', // The CSS class to assign to the spinner
       zIndex: 2e9, // The z-index (defaults to 2000000000)
       top: '0px', // Top position relative to parent in px
-      left: '10px' // Left position relative to parent in px
+      left: 'auto' // Left position relative to parent in px
     }
   },
 
@@ -73,46 +73,46 @@ var Summer = {
         };
     }
 
-        size = window.getComputedStyle(document.body,':after').getPropertyValue('content'),
-        $timeline = $('#js-timeline'),
-        $player = $('#js-player');
-        $songs = $('#js-songs');
+    size = window.getComputedStyle(document.body,':after').getPropertyValue('content'),
+    $timeline = $('#js-timeline'),
+    $player = $('#js-player');
+    $songs = $('#js-songs');
         
-        $timeline
-          .spin(Summer.opts.spinLg)
-          .fadeTo(Summer.opts.time/2, 0.5);
+    $timeline
+      .spin(Summer.opts.spinLg)
+      .fadeTo(Summer.opts.time/2, 0.5);
           
-        $.getJSON('assets/data/data.json', function(data) {
-          var arr = [];
+    $.getJSON('assets/data/data.json', function(data) {
+      var arr = [];
 
-            $.each(data, function(key, val) {
-                Summer.data = val;
-            });
-
-          $.each(Summer.data.songs, function(i, val) {
-              if (this.event_id instanceof Array) {
-
-                $.each(this.event_id, function(i, val){
-                  arr.push(val);
-                });
-                
-              } else {
-                arr.push(this.event_id);
-              }
-          });
-           
-          Summer.data.count = arrFrequency(arr);
-          
-            Summer.timeline.init();
-            Summer.player.init();
-            Summer.timeline.orient();
-
+        $.each(data, function(key, val) {
+            Summer.data = val;
         });
 
-        triggaPane($('#js-about'), $('#b-about'));
-        scrollTop($('#js-top'));
+      $.each(Summer.data.songs, function(i, val) {
+          if (this.event_id instanceof Array) {
 
-        window.onresize = function() {
+            $.each(this.event_id, function(i, val){
+              arr.push(val);
+            });
+            
+          } else {
+            arr.push(this.event_id);
+          }
+      });
+           
+      Summer.data.count = arrFrequency(arr);
+      
+      Summer.timeline.init();
+      Summer.player.init();
+      Summer.timeline.orient();
+
+    });
+
+    triggaPane($('#js-about'), $('#b-about'));
+    scrollTop($('#js-top'));
+
+    window.onresize = function() {
       size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
 
       Summer.timeline.orient();

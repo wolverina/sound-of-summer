@@ -433,10 +433,11 @@
 	}
 
   @media all and (min-width: $media-sm) {
-    width: 35%;
+    width: 66%;
     border-radius: 10px 10px 0 0;
     border: 1px solid $color-neutral;
     right: $unit-h;
+    min-height: 36px;
     box-shadow: 0px 0px $unit-v $color-neutral;
     
     .inner { padding: 0.5em 1em; }
@@ -446,6 +447,14 @@
     .meta { margin-top: 2px; }
 
     .a-close { top: 10px; }
+  }
+
+  @media all and (min-width: $media-md) {
+  	width: 50%;
+  }
+
+  @media all and (min-width: $media-lg) {
+  	width: 33%;
   }
 }
 

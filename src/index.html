@@ -8,8 +8,15 @@
         <meta name="description" content="Here comes the summer.">
         <meta name="viewport" content="width=device-width">
         <meta name="author" content="Chloe Weil">
-        
+
+        <!--(if target dev)><!-->
         <link rel="stylesheet" href="./assets/css/main.css">
+        <!--<!(endif)-->
+
+        <!--(if target dist)>
+        <link rel="stylesheet" href="./assets/css/main.min.css">
+        <!(endif)-->
+
         <!-- Unicode CSS Loader: place this in the head of your page -->
         <script>
         /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
@@ -21,8 +28,16 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="./assets/js/jquery-1.9.1.js"><\/script>')</script>
         <script src="./assets/js/modernizr.js"></script>
+
+        <!--(if target dev)><!-->
         <script src="./assets/js/bundle/spin.js"></script>
         <script src="./assets/js/bundle/main.js"></script>
+        <!--<!(endif)-->
+
+        <!--(if target dist)>
+        <script src="./assets/js/bundle/main.min.js"></script>
+        <!(endif)-->
+
         <script src="http://use.typekit.com/rxq7kzd.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
 
@@ -90,9 +105,10 @@
         var sc_security="62f31935"; 
         </script>
         <script src="http://www.statcounter.com/counter/counter.js"></script>
+
         <noscript>
             <div class="statcounter">
-                <a title="godaddy web statistics"
+                <a title=""
                     href="http://statcounter.com/godaddy_website_tonight/"
                     target="_blank"><img class="statcounter"
                     src="http://c.statcounter.com/8026493/0/62f31935/1/"
