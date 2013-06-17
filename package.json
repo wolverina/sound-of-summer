@@ -1,11 +1,7 @@
 {
   "name": "summer",
-  "version": "0.0.0",
-  "description": "Description",
-  "main": "index.html",
-  "dependencies": {
-    "grunt": "~0.4.1"
-  },
+  "version": "2.0.0",
+  "description": "Here Comes the Summer",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunticon": "~0.2.1",

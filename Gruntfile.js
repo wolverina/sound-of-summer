@@ -34,13 +34,13 @@ module.exports = function(grunt) {
           'dist/assets/css/main.min.css': ['src/assets/css/main.css']
         }
       }
-    }
+    },
 
-    // jshint: {
-    //   files: {
-    //     src: ['src/assets/js/bundle/main.js']
-    //   }
-    // }
+    jshint: {
+      files: {
+        src: ['src/assets/js/bundle/main.js']
+      }
+    }
 
   });
 
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-targethtml');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
- //grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.registerTask('default', ['grunt-contrib-uglify', 'grunt-contrib-cssmin', 'grunt-targethtml', 'grunt-grunticon']);
 
