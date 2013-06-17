@@ -27,8 +27,11 @@
 }
 
 .hdr-title {
-	color: white;
-	font-size: 1.4em;
+	$font-local: 22px;
+
+	color: #fff;
+	font-size: calc-em($font-local, $font-base);
+	margin-bottom: calc-em(10px, $font-local);
 }
 
 .message {
@@ -51,10 +54,17 @@
 
 .term { 
 	font-weight: 700; 
-	margin-right: .3em;
+	margin-right: .2em;
 }
 
 .caption { 
 	margin: 0 0 0 $unit-h; 
 	font-weight: 800;
+}
+
+.alert {
+	font-weight: 700;
+	margin: 0;
+
+	.icon { float: left; }
 }

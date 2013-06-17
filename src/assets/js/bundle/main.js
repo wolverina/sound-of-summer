@@ -14,6 +14,8 @@ var Summer = {
 	},
 
 	'opts': {
+		'time': 500,
+
 		'spinLg': {
 			lines: 7, // The number of lines to draw
 			length: 15, // The length of each line
@@ -34,10 +36,10 @@ var Summer = {
 		},
 
 		'spinSm': {
-			lines: 7, // The number of lines to draw
-			length: 4, // The length of each line
-			width: 4, // The line thickness
-			radius: 7, // The radius of the inner circle
+			lines: 6, // The number of lines to draw
+			length: 3, // The length of each line
+			width: 3, // The line thickness
+			radius: 5, // The radius of the inner circle
 			corners: 0, // Corner roundness (0..1)
 			rotate: 0, // The rotation offset
 			direction: 1, // 1: clockwise, -1: counterclockwise
@@ -423,7 +425,9 @@ var Summer = {
 				$player							
             		.find('.inner')
 					.spin(false)
-
+					.find('.alert')
+					.hide()
+					.end()
 					.find('.term')
 			 		.html(title)
 			 		.end()
@@ -439,6 +443,16 @@ var Summer = {
 					'-ms-animation-duration': 1/period+'s',
 					'animation-duration': 1/period+'s'
 				});
+
+				R.player.on("change:playState", function(state) {
+                    if (state === R.player.PLAYSTATE_PLAYING) {
+                        R.player.on("change:playState", function(state) {
+                            if (state === R.player.PLAYSTATE_STOPPED) {
+                                $player.find('.a-close').trigger('click');
+                            }
+                        });           
+                    }
+		        });
 			});
 		},
 
@@ -446,7 +460,12 @@ var Summer = {
 			$player
 				.find('.inner')
 				.spin(false)
-				.html('<p id="js-player-error"><span class="icon-icn-locked"></span>This track is not available.</p>');
+				.find('.meta')
+				.hide()
+				.end()
+				.find('.alert')
+				.html('<span class="icon icon-icn-locked"></span>This track is not available.')
+                .show();
 		}
 	}
 }
@@ -497,9 +516,9 @@ function scrollTop(anchor){
 			y = $(window).scrollTop();
 	  
 		if( y > (h*.175) && y < (h*.8) ){
-			anchor.fadeIn('slow');
+			anchor.fadeIn(Summer.opts.time);
 		} else {
-			anchor.fadeOut('slow');
+			anchor.fadeOut(Summer.opts.time);
 		}
 	});
 	
@@ -511,5 +530,7 @@ function scrollTop(anchor){
 }
 
 function scrollTo(id){
-	$('html,body').animate({scrollTop: $(id).offset().top},'slow');
+	$('html,body').animate({
+		scrollTop: $(id).offset().top
+	}, Summer.opts.time);
 }
