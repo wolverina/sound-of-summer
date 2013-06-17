@@ -1,6 +1,6 @@
 .inner {
 	margin: 0 auto;
-	padding: $unit-v 7.5%;
+	padding: $unit-v/2 7.5%;
 	max-width: 1000px;
 	@include pie-clearfix;
 
@@ -10,7 +10,7 @@
 }
 
 .g-header {
-	margin: $unit-h 0;
+	margin-top: $unit-h;
 	
 	.a-resource { 
 		float: right; 
@@ -81,7 +81,8 @@
 	color: $color-relief-hex;
 	color: $color-relief;
 	position: relative;
-	
+	margin: $unit-h 0;
+
 	p { 
 		font-size: calc-em(18px, $font-base); 
 		margin-bottom: 2em;
@@ -234,7 +235,7 @@
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
-	min-height: 120px;
+	min-height: 450px;
 
 	li { 
 		position: relative; 
@@ -283,7 +284,9 @@
 	}
 
   @media all and (min-width: $media-sm) {
-  	width: 24.1em;
+  	width: 22.4em;
+  	//width: 24.1em;
+  	min-height: 350px;
     
     li { 
       display: inline-block; 
@@ -323,7 +326,8 @@
   }
 
   @media all and (min-width: $media-md) {
-    width: 35.7em;
+    width: 32.9em;
+    //width: 35.7em;
     
     li { width: 42px; }
 
@@ -360,7 +364,8 @@
   }
 
   @media all and (min-width: $media-lg) {
-    width: 47.9em;  
+    width: 44.2em;
+    //width: 47.9em;  
     
     li { width: 57px; }
     
@@ -399,7 +404,8 @@
 	box-shadow: 0 0 $unit-h/2 $color-neutral-lite;
 	width: 100%;
 	padding: 0;
-	min-height: 36px;
+	min-height: 50px;
+
 	@include transition($time-default ease bottom);
 	
 	.inner { 
