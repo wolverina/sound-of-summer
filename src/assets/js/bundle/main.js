@@ -140,28 +140,49 @@ var Summer = {
 	            );
         	});
 
+            if (typeof localStorage['Summer.year'] !== 'undefined') {
+                var object = JSON.parse(localStorage.getItem(['Summer.year'])),
+                    date = object.timestamp,
+                    year = object.value,
+                    now = new Date().getTime(),
+                    hour = 60 * 60000;
+                
+                if (parseInt(date+hour) >= now) {
+                    Summer.timeline.load(year);
+                }
+            }
+
 			$timeline.find('a').on('click', function(e){
-				var $self = $(this),
-					year = $(this).data('year').toString();
+                var object = {
+                        value: $(this).data('year').toString(), 
+                        timestamp: new Date().getTime()
+                    };
         		
-        		$timeline.spin(Summer.opts.spinLg);
+                localStorage.setItem('Summer.year', JSON.stringify(object));
 
-        		$('#js-content').html('').load('_content.html', function(){
-        			$timeline
-        				.spin(false)
-        				.find('a')
-        				.removeClass('is-active');
-
-        			$self.addClass('is-active');
-        			
-        			Summer.event(year, function(){
-        				scrollTo('#js-content');
-        			});
-        		});        		
+        		Summer.timeline.load(object.value); 		
 
         		e.preventDefault();
-			})
+			});
 		},
+
+        load: function(year){
+            $timeline.spin(Summer.opts.spinLg);
+
+            $('#js-content').html('').load('_content.html', function(){
+                $timeline
+                    .spin(false)
+                    .find('a')
+                    .removeClass('is-active')
+                    .end()
+                    .find('a[data-year="'+year+'"]')
+                    .addClass('is-active');
+                
+                Summer.event(year, function(){
+                    scrollTo('#js-content');
+                });
+            });  
+        },
 
 		orient: function(){
 			var $label = $timeline.find('.label');
@@ -359,7 +380,7 @@ var Summer = {
 				},
 
 				success: function(response) {
-					if (response.result.number_results != 0){
+					if (response.result.number_results !== 0){
 
 						var src = response.result.results[0].key;
 
