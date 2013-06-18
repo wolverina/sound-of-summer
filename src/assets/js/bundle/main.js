@@ -467,14 +467,14 @@ var Summer = {
             });
 
             R.player.on("change:playState", function(state) {
-                        if (state === R.player.PLAYSTATE_PLAYING) {
-                            R.player.on("change:playState", function(state) {
-                                if (state === R.player.PLAYSTATE_STOPPED) {
-                                    $player.find('.a-close').trigger('click');
-                                }
-                            });           
+                if (state === R.player.PLAYSTATE_PLAYING) {
+                    R.player.on("change:playState", function(state) {
+                        if (state === R.player.PLAYSTATE_STOPPED) {
+                            $player.find('.a-close').trigger('click');
                         }
-                });
+                    });           
+                }
+            });
           });
         },
 
