@@ -1,4 +1,4 @@
-sound-of-summer
+Sound of Summer
 ===============
 
-Here Comes The Summer
+A personal project visualizing custom metadata from my iTunes library.
