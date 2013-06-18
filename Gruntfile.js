@@ -43,10 +43,20 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      files: ['<%= jshint.files %>'],
-      tasks: ['jshint']
-    }
+      options: {
+        livereload: true,
+      },
 
+      scripts: {
+        files: ['<%= jshint.files.src %>'],
+        tasks: ['jshint']
+      },
+
+      css: {
+        files: ['src/assets/sass/*.scss', 'src/assets/sass/partials/*.scss'],
+        tasks: ['compass']
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -54,9 +64,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-targethtml');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-compass');
   
-  grunt.registerTask('watch', ['watch']);
-  grunt.registerTask('default', ['uglify', 'cssmin', 'targethtml', 'grunticon']);
+  grunt.registerTask('work', ['watch']);
+  grunt.registerTask('build', ['uglify', 'cssmin', 'targethtml', 'grunticon']);
 
 
 };
