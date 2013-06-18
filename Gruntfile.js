@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'dist/assets/js/main.min.js': ['assets/js/bundle/*.js']
+          'dist/assets/js/main.min.js': ['src/assets/js/bundle/*.js']
         }
       }
     },
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
     targethtml: {
       dist: {
         files: {
-          'dist/index.html': 'index.html'
+          'dist/index.html': 'src/index.html'
         }
       }
     },
@@ -49,8 +49,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-targethtml');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-
-  grunt.registerTask('default', ['grunt-contrib-uglify', 'grunt-contrib-cssmin', 'grunt-targethtml', 'grunt-grunticon']);
+  
+  grunt.registerTask('watch', ['watch']);
+  grunt.registerTask('default', ['uglify', 'cssmin', 'targethtml', 'grunticon']);
 
 
 };
