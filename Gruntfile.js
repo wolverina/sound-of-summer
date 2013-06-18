@@ -40,6 +40,11 @@ module.exports = function(grunt) {
       files: {
         src: ['src/assets/js/bundle/main.js']
       }
+    },
+
+    watch: {
+      files: ['<%= jshint.files %>'],
+      tasks: ['jshint']
     }
 
   });
