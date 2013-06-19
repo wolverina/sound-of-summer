@@ -56,18 +56,35 @@ module.exports = function(grunt) {
         files: ['src/assets/sass/*.scss', 'src/assets/sass/partials/*.scss'],
         tasks: ['compass']
       }
+    },
+
+    copy: {
+      main: {
+        files: [
+          {
+            src: ['src/**'], 
+            dest: 'dist/'
+          }
+        ]
+      }
     }
   });
 
+
+  //watch tasks
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  
+  //build tasks
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-grunticon');
   grunt.loadNpmTasks('grunt-targethtml');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  
+
   grunt.registerTask('work', ['watch']);
-  grunt.registerTask('build', ['uglify', 'cssmin', 'targethtml', 'grunticon']);
+  grunt.registerTask('build', ['copy', 'uglify', 'cssmin', 'targethtml', 'grunticon']);
 
 
 };

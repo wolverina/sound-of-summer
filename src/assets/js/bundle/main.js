@@ -73,8 +73,8 @@ var Summer = {
             };
         }
 
-        size = window.getComputedStyle(document.body,':after').getPropertyValue('content'),
-        $timeline = $('#js-timeline'),
+        size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
+        $timeline = $('#js-timeline');
         $player = $('#js-player');
         $songs = $('#js-songs');
             
@@ -83,24 +83,23 @@ var Summer = {
             .fadeTo(Summer.opts.time/2, 0.5);
               
         $.getJSON('assets/data/data.json', function(data) {
-            var arr = [];
 
-            $.each(data, function(key, val) {
-                Summer.data = val;
-            });
+            Summer.data = data.table;
+            
+            var arr = [],
+                obj = Summer.data.songs;
 
-            $.each(Summer.data.songs, function(i, val) {
-                if (this.event_id instanceof Array) {
-
-                $.each(this.event_id, function(i, val){
-                    arr.push(val);
-                });
-
+            for (i = 0, len = obj.length; i < len; i++) {
+                
+                if (obj[i].event_id instanceof Array) {
+                    for (j = 0, length = obj[i].event_id.length; j < length; j++) {
+                        arr.push(obj[i].event_id[j]);
+                    }
                 } else {
-                    arr.push(this.event_id);
+                    arr.push(obj[i].event_id);
                 }
-            });
-               
+            }
+
             Summer.data.count = arrFrequency(arr);
 
             Summer.timeline.init();
@@ -121,30 +120,34 @@ var Summer = {
 
     'timeline': {
         init: function(){
+            var obj = Summer.data.events,
+                count = Summer.data.count[1];
+
             $timeline
                 .fadeTo(Summer.opts.time/2, 1)
                 .spin(false);
+            
+            for (i = 0, len = obj.length; i < len; i++) {
 
-            $.each(Summer.data.events, function(i){
                 $timeline.append(
                     '<li>'+
                     '<div class="datum">'+
                     '<a href="#" data-song-count="'+
-                    Summer.data.count[1][i]+
+                    count[i]+
                     '" data-year="'+
-                    this.date+
+                    obj[i].date+
                     '">'+
                     '<span>'+
-                    Summer.data.count[1][i]+
+                    count[i]+
                     '</span>'+
                     '</a>'+
                     '</div>'+
                     '<div class="label">'+
-                    this.date+
+                    obj[i].date+
                     '</div>'+
                     '</li>'
                 );
-            });
+            }
 
             if (typeof localStorage['Summer.year'] !== 'undefined') {
                 var object = JSON.parse(localStorage.getItem(['Summer.year'])),
@@ -160,7 +163,7 @@ var Summer = {
 
             $timeline.find('a').on('click', function(e){
                 var object = {
-                    value: $(this).data('year').toString(), 
+                    value: this.getAttribute('data-year').toString(), 
                     timestamp: new Date().getTime()
                 };
 
@@ -195,7 +198,7 @@ var Summer = {
 
             $timeline.find('[data-song-count]').each(function(){
                 var $self = $(this),
-                    num = $self.attr('data-song-count');
+                    num = this.getAttribute('data-song-count');
 
                 if (size === '"base"' /*ff*/ || size === 'base') {
                     var value = (num)*2;
@@ -243,76 +246,74 @@ var Summer = {
                 }
             });
 
-            if (size === '"small"' /*ff*/ || size === 'small') {
-                $label.each(function(){
-                    var $str = $(this).text(),
-                        str = $str.replace('20', "'");
-                      
-                    $(this).text(str);
-                });
+            $label.each(function(){
+                var self = $(this),
+                    str = self.text();
 
-            } else {
-                $label.each(function(){
-                    var $str = $(this).text(),
-                        str = $str.replace("'", "20");
-
-                    $(this).text(str);
-                });
-            }
+                if (size === '"small"' /*ff*/ || size === 'small') {
+                    self.text(str.replace('20', "'"));
+                } else {
+                    self.text(str.replace("'", "20"));
+                }
+            });
         }
     },
      
     event: function(year, callback){
         var data = {
-            'locations': [],
-            'songs': []
-        },
-        $songs = $('#js-songs');
+                'locations': [],
+                'songs': []
+            },
+            $songs = $('#js-songs'),
+            events = Summer.data.events,
+            locations = Summer.data.locations,
+            songs = Summer.data.songs;
 
-        $.each(Summer.data.events, function(){
-            if (this.id.indexOf(year) > -1) {
-                data.id = this.id,
-                data.date = this.date,
-                data.description = this.description;
+        for ( i = 0; i < events.length; i++ ) {
+            if (events[i].id.indexOf(year) > -1) {
+                data.id = events[i].id;
+                data.date = events[i].date;
+                data.description = events[i].description;
             }
-        });
+        }
 
-        $.each(Summer.data.locations, function(){
-            if (this.event_id.indexOf(year) > -1) { 
-                data.locations.push(this);
+        for ( i = 0; i < locations.length; i++ ) {
+            if (locations[i].event_id.indexOf(year) > -1) { 
+
+                data.locations.push(locations[i]);
                 
                 $('#js-locations').append(
                     '<li>'+
                     '<img src="http://maps.googleapis.com/maps/api/staticmap?center='+
-                    this.location+
+                    locations[i].location+
                     '&zoom=15&size=430x200&sensor=false">'+
                     '<div class="caption">'+
                     '<span class="icon icon-icn-location"></span>'+
-                    this.name+
+                    locations[i].name+
                     '</div>'+
                     '</li>'      
                 );
             }
-        });
+        }
 
-        $.each(Summer.data.songs, function(i){
-            if (this.event_id.indexOf(year) > -1) {
-                data.songs.push(this);
+        for ( i = 0; i < songs.length; i++ ) {
+            if (songs[i].event_id.indexOf(year) > -1) {
+                data.songs.push(songs[i]);
 
                 $songs.append(
                     '<li>'+
                     '<a href="#">'+
                     '<span class="term">'+
-                    this.title+
+                    songs[i].title+
                     '</span>'+
                     '<span class="def">'+
-                    this.artist+
+                    songs[i].artist+
                     '</span>'+
                     '</a>'+
                     '</li>'
                 );
             }
-        });
+        }
 
         $.each($songs.find('a'), function(i) {
             var $self = $(this),
@@ -496,7 +497,7 @@ function arrFrequency(arr) {
     var a = [], b = [], prev;
     
     arr.sort();
-    for ( var i = 0; i < arr.length; i++ ) {
+    for ( i = 0; i < arr.length; i++ ) {
         if ( arr[i] !== prev ) {
             a.push(arr[i]);
             b.push(1);
