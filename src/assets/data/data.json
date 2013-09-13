@@ -17,7 +17,7 @@
         "id": "46",
         "name": "New York, NY — Dad's House",
         "location": "220 East 57th Street 10022",
-        "event_id": ["2001, 2002", "2003", "2004", "2005", "2006", "2007", "2008", "2012", "2013"]
+        "event_id": ["2001, 2002", "2003", "2004", "2005", "2006", "2007", "2008", "2012"]
       },
       {
         "id": "47",
@@ -65,7 +65,7 @@
         "id": "59",
         "name": "New York, NY",
         "location": "Herald Square NY",
-        "event_id": "2003"
+        "event_id": ["2003", "2013"]
       },
       {
         "id": "62",
@@ -107,7 +107,7 @@
         "id": "75",
         "name": "East Rockaway, NY — Mom's House",
         "location": "9 Alden Road 11518",
-        "event_id": ["2007", "2008", "2013"]
+        "event_id": ["2007", "2008"]
       },
       {
         "id": "77",
@@ -119,7 +119,7 @@
         "id": "80",
         "name": "Portland, OR — My Apartment",
         "location": "221 NW 5th Avenue 97209",
-        "event_id": ["2009", "2010", "2011", "2012", "2013"]
+        "event_id": ["2009", "2010", "2011", "2012"]
       },
       {
         "id": "83",
@@ -185,12 +185,6 @@
         "id": "100",
         "name": "Cortona, Italy",
         "location": "Cortona, Italy",
-        "event_id": ["2013"]
-      },
-      {
-        "id": "101",
-        "name": "Portland, OR — Work",
-        "location": "Collective Agency Portland, OR",
         "event_id": ["2013"]
       }
     ],
