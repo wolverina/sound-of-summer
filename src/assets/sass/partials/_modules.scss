@@ -284,8 +284,8 @@
 	}
 
   @media all and (min-width: $media-sm) {
-  	width: 22.4em;
-  	//width: 24.1em;
+  	//width: 22.4em;
+  	width: 24.1em;
   	min-height: 350px;
     
     li { 
@@ -326,8 +326,8 @@
   }
 
   @media all and (min-width: $media-md) {
-    width: 32.9em;
-    //width: 35.7em;
+    //width: 32.9em;
+    width: 35.7em;
     
     li { width: 42px; }
 
@@ -364,8 +364,8 @@
   }
 
   @media all and (min-width: $media-lg) {
-    width: 44.2em;
-    //width: 47.9em;  
+    //width: 44.2em;
+    width: 47.9em;  
     
     li { width: 57px; }
     

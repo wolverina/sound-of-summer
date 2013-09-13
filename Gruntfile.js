@@ -47,14 +47,23 @@ module.exports = function(grunt) {
         livereload: true,
       },
 
-      scripts: {
-        files: ['<%= jshint.files.src %>'],
-        tasks: ['jshint']
-      },
+      // scripts: {
+      //   files: ['<%= jshint.files.src %>'],
+      //   tasks: ['jshint']
+      // },
 
       css: {
         files: ['src/assets/sass/*.scss', 'src/assets/sass/partials/*.scss'],
         tasks: ['compass']
+      }
+    },
+
+    compass: {
+      dev: {
+        options: {
+          sassDir: 'src/assets/sass/',
+          cssDir: 'src/assets/css/'
+        }
       }
     },
 
