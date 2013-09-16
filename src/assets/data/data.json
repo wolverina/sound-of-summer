@@ -252,7 +252,7 @@
       {
         "id": "2013",
         "date": "2013",
-        "description": "\"Can’t tell if fall allergies or I’m being trolled by a really ineffectual conversion disorder\" Suffered a medium-sized disappointment, couldn't get out of bed for six weeks. At least July was good."
+        "description": "\"Can’t tell if fall allergies or I’m being trolled by a really ineffectual conversion disorder.\" Suffered a medium-sized disappointment, couldn't get out of bed for six weeks."
       }
     ],
     "songs": [
@@ -1466,7 +1466,7 @@
         "id": "2818",
         "title": "Pendulum",
         "artist": "Guided By Voices",
-        "event_id": ["2003", "2007", "2013"]
+        "event_id": ["2003", "2007"]
       },
       {
         "id": "2819",
@@ -2846,7 +2846,7 @@
         "id": "3426",
         "title": "Dazzle",
         "artist": "Siouxsie & the Banshees",
-        "event_id": ["2006", "2008", "2013"]
+        "event_id": ["2006", "2008"]
       },
       {
         "id": "3428",
@@ -4244,7 +4244,7 @@
         "id": "3964",
         "title": "Afraid of Everyone",
         "artist": "The National",
-        "event_id": ["2011", "2013"]
+        "event_id": ["2011"]
       },
       {
         "id": "3965",
@@ -4280,7 +4280,7 @@
         "id": "3972",
         "title": "Anyone's Ghost",
         "artist": "The National",
-        "event_id": ["2011", "2013"]
+        "event_id": ["2011"]
       },
       {
         "id": "3973",
@@ -4406,7 +4406,7 @@
         "id": "4032",
         "title": "Lemonworld",
         "artist": "The National",
-        "event_id": ["2011", "2012", "2013"]
+        "event_id": ["2011", "2012"]
       },
       {
         "id": "4033",
@@ -4424,7 +4424,7 @@
         "id": "4036",
         "title": "Little Faith",
         "artist": "The National",
-        "event_id": ["2011", "2013"]
+        "event_id": ["2011"]
       },
       {
         "id": "4037",
@@ -4946,13 +4946,13 @@
         "id": "4192",
         "title": "Secret Meeting",
         "artist": "The National",
-        "event_id": ["2012", "2013"]
+        "event_id": ["2012"]
       },
       {
         "id": "4193",
         "title": "Baby, We'll Be Fine",
         "artist": "The National",
-        "event_id": ["2012", "2013"]
+        "event_id": ["2012"]
       },
       {
         "id": "4194",
@@ -5117,122 +5117,62 @@
         "event_id": "2012"
       },
       {
-        "title": "Wave of Mutilation",
-        "artist": "The Pixies",
-        "event_id": "2013"
-      },
-      {
-        "title": "Only Happy When It Rains",
-        "artist": "Garbage",
-        "event_id": "2013"
-      },
-      {
-        "title": "Manifest Destiny Pt. 2",
-        "artist": "Local H",
-        "event_id": "2013"
-      },
-      {
-        "title": "Hey Ma",
-        "artist": "Cam'ron",
-        "event_id": "2013"
-      },
-      {
-        "title": "Ever Fallen in Love?",
-        "artist": "The Buzzcocks",
-        "event_id": "2013"
-      },
-      {
-        "title": "River Euphrates",
-        "artist": "The Pixies",
-        "event_id": "2013"
-      },
-      {
-        "title": "No",
-        "artist": "The Wedding Present",
-        "event_id": "2013"
-      },
-      {
-        "title": "Aging Spinsters",
-        "artist": "the 6ths",
-        "event_id": "2013"
-      },
-      {
-        "title": "Moonage Daydream",
-        "artist": "David Bowie",
-        "event_id": "2013"
-      },
-      {
-        "title": "Sunday Bloody Sunday",
-        "artist": "U2",
-        "event_id": "2013"
-      },
-      {
-        "title": "New Year's Day",
-        "artist": "U2",
-        "event_id": "2013"
-      },
-      {
-        "title": "You Tear the World in Two",
-        "artist": "Pale Saints",
-        "event_id": ["2006", "2013"]
-      },
-      {
-        "title": "Loretta's Scars",
-        "artist": "Pavement",
-        "event_id": "2013"
-      },
-      {
-        "title": "Lit Up",
-        "artist": "The National",
-        "event_id": "2013"
-      },
-      {
-        "title": "Looking for Astronauts",
-        "artist": "The National",
-        "event_id": "2013"
-      },
-      {
-        "title": "Sovay",
-        "artist": "Andrew Bird",
-        "event_id": "2013"
-      },
-      {
-        "title": "My Son Cool",
-        "artist": "Guided by Voices",
-        "event_id": "2013"
-      },
-      {
         "title": "Abel",
         "artist": "The National",
         "event_id": "2013"
       },
       {
-        "title": "Fake Empire",
+        "title": "About Today",
         "artist": "The National",
         "event_id": "2013"
       },
       {
-        "title": "Racing Like a Pro",
+        "title": "Adolescent Sex",
+        "artist": "Japan",
+        "event_id": "2013"
+      },
+      {
+        "title": "another nail in my heart",
+        "artist": "Squeeze",
+        "event_id": "2013"
+      },
+      {
+        "title": "Apartment Story",
         "artist": "The National",
         "event_id": "2013"
       },
       {
-        "title": "Freak Snake",
-        "artist": "BOAN",
-        "event_id": ["2011", "2013"]
-      },
-      {
-        "title": "Baby Get Worse",
-        "artist": "Divine Fits",
+        "title": "Bleak",
+        "artist": "Hausu",
         "event_id": "2013"
       },
       {
-        "title": "Mistaken for Strangers",
-        "artist": "The National",
+        "title": "Blossomy Parks",
+        "artist": "Escarlatina Obsessiva",
         "event_id": "2013"
       },
       {
-        "title": "England",
+        "title": "Blue Nylon",
+        "artist": "The Buggles",
+        "event_id": "2013"
+      },
+      {
+        "title": "Cast Of Thousands",
+        "artist": "The Adverts",
+        "event_id": "2013"
+      },
+      {
+        "title": "Cross",
+        "artist": "Cough Cool",
+        "event_id": "2013"
+      },
+      {
+        "title": "Crush Em",
+        "artist": "Serengeti",
+        "event_id": "2013"
+      },
+      {
+        "title": "Don't Swallow the Cap",
         "artist": "The National",
         "event_id": "2013"
       },
@@ -5242,118 +5182,18 @@
         "event_id": "2013"
       },
       {
-        "title": "Rearrange Me",
-        "artist": "Criminal Hygiene",
-        "event_id": "2013"
-      },
-      {
-        "title": "Shuggie",
-        "artist": "Foxygen",
-        "event_id": "2013"
-      },
-      {
-        "title": "Kibitzer",
-        "artist": "Tall For Jockeys",
-        "event_id": "2013"
-      },
-      {
-        "title": "Blue Nylon",
-        "artist": "The Buggles",
-        "event_id": "2013"
-      },
-      {
-        "title": "Karen",
+        "title": "England",
         "artist": "The National",
         "event_id": "2013"
       },
       {
-        "title": "Val Jester",
-        "artist": "The National",
+        "title": "Ever Fallen in Love?",
+        "artist": "The Buzzcocks",
         "event_id": "2013"
       },
       {
-        "title": "The Geese of Beverly Road",
-        "artist": "The National",
-        "event_id": "2013"
-      },
-      {
-        "title": "Come To Admire",
-        "artist": "Gold And Youth",
-        "event_id": "2013"
-      },
-      {
-        "title": "Nobody's Business",
-        "artist": "Billy Idol",
-        "event_id": "2013"
-      },
-      {
-        "title": "The Spinnin' Boy",
+        "title": "Fakir",
         "artist": "Escarlatina Obsessiva",
-        "event_id": "2013"
-      },
-      {
-        "title": "Trans Siberian Railway Thief",
-        "artist": "Escarlatina Obsessiva",
-        "event_id": "2013"
-      },
-      {
-        "title": "Havalina",
-        "artist": "The Pixies",
-        "event_id": "2013"
-      },
-      {
-        "title": "Squalor Victoria",
-        "artist": "The National",
-        "event_id": "2013"
-      },
-      {
-        "title": "Green Gloves",
-        "artist": "The National",
-        "event_id": "2013"
-      },
-      {
-        "title": "Apartment Story",
-        "artist": "The National",
-        "event_id": "2013"
-      },
-      {
-        "title": "Start a War",
-        "artist": "The National",
-        "event_id": "2013"
-      },
-      {
-        "title": "Guest Room",
-        "artist": "The National",
-        "event_id": "2013"
-      },
-      {
-        "title": "Cast Of Thousands",
-        "artist": "The Adverts",
-        "event_id": "2013"
-      },
-      {
-        "title": "Chelsea Said",
-        "artist": "Cassettes on Tape",
-        "event_id": "2013"
-      },
-      {
-        "title": "Maman a Tort",
-        "artist": "Mylène Farmer",
-        "event_id": "2013"
-      },
-      {
-        "title": "About Today",
-        "artist": "The National",
-        "event_id": "2013"
-      },
-      {
-        "title": "Headspins",
-        "artist": "Splashh",
-        "event_id": "2013"
-      },
-      {
-        "title": "The Boy with the Perpetual Nervousness",
-        "artist": "The Feelies",
         "event_id": "2013"
       },
       {
@@ -5362,13 +5202,273 @@
         "event_id": "2013"
       },
       {
-        "title": "Do The Bambi",
-        "artist": "Stereo Total",
+        "title": "Fly On The Wall",
+        "artist": "XTC",
         "event_id": "2013"
       },
       {
-        "title": "The Super Thing",
-        "artist": "Devo",
+        "title": "Freak Snake",
+        "artist": "BOAN",
+        "event_id": ["2011", "2013"]
+      },
+      {
+        "title": "The Geese of Beverly Road",
+        "artist": "The National",
+        "event_id": "2013"
+      },
+      {
+        "title": "Gloria",
+        "artist": "U2",
+        "event_id": "2013"
+      },
+      {
+        "title": "Graceless",
+        "artist": "The National",
+        "event_id": "2013"
+      },
+      {
+        "title": "Great Southern Land",
+        "artist": "Icehouse",
+        "event_id": "2013"
+      },
+      {
+        "title": "Hang Onto Yourself",
+        "artist": "David Bowie",
+        "event_id": "2013"
+      },
+      {
+        "title": "Havalina",
+        "artist": "The Pixies",
+        "event_id": "2013"
+      },
+      {
+        "title": "Headspins",
+        "artist": "Splashh",
+        "event_id": "2013"
+      },
+      {
+        "title": "Heart of Darkness",
+        "artist": "Sparklehorse",
+        "event_id": "2013"
+      },
+      {
+        "title": "Heartbreak Beat",
+        "artist": "Psychedelic Furs",
+        "event_id": "2013"
+      },
+      {
+        "title": "Hey Ma",
+        "artist": "Cam'ron",
+        "event_id": "2013"
+      },
+      {
+        "title": "Hit Void",
+        "artist": "Primal Scream",
+        "event_id": "2013"
+      },
+      {
+        "title": "Hold On Tight",
+        "artist": "Electric Light Orchestra",
+        "event_id": "2013"
+      },
+      {
+        "title": "I Do Myself",
+        "artist": "The Evens",
+        "event_id": "2013"
+      },
+      {
+        "title": "I Should Live in Salt",
+        "artist": "The National",
+        "event_id": "2013"
+      },
+      {
+        "title": "I Won't Let You Down",
+        "artist": "Jim Diamond",
+        "event_id": "2013"
+      },
+      {
+        "title": "Keeping Perfect Time",
+        "artist": "Cough Cool",
+        "event_id": "2013"
+      },
+      {
+        "title": "Kibitzer",
+        "artist": "Tall For Jockeys",
+        "event_id": "2013"
+      },
+      {
+        "title": "the klan",
+        "artist": "Theatre of Hate",
+        "event_id": "2013"
+      },
+      {
+        "title": "London In February",
+        "artist": "Coastal",
+        "event_id": "2013"
+      },
+      {
+        "title": "Loretta's Scars",
+        "artist": "Pavement",
+        "event_id": "2013"
+      },
+      {
+        "title": "Maman a Tort",
+        "artist": "Mylène Farmer",
+        "event_id": "2013"
+      },
+      {
+        "title": "Manifest Destiny Pt. 2",
+        "artist": "Local H",
+        "event_id": "2013"
+      },
+      {
+        "title": "Misfits 4X4",
+        "artist": "Cough Cool",
+        "event_id": "2013"
+      },
+      {
+        "title": "Moonage Daydream",
+        "artist": "David Bowie",
+        "event_id": "2013"
+      },
+      {
+        "title": "Music for Chameleons",
+        "artist": "Gary Numan",
+        "event_id": "2013"
+      },
+      {
+        "title": "No",
+        "artist": "The Wedding Present",
+        "event_id": "2013"
+      },
+      {
+        "title": "No Doubt About It",
+        "artist": "Hot Chocolate",
+        "event_id": "2013"
+      },
+      {
+        "title": "O Superman",
+        "artist": "Laurie Anderson",
+        "event_id": "2013"
+      },
+      {
+        "title": "Only Happy When It Rains",
+        "artist": "Garbage",
+        "event_id": "2013"
+      },
+      {
+        "title": "Pink Rabbits",
+        "artist": "The National",
+        "event_id": "2013"
+      },
+      {
+        "title": "Rearrange Me",
+        "artist": "Criminal Hygiene",
+        "event_id": "2013"
+      },
+      {
+        "title": "River Euphrates",
+        "artist": "The Pixies",
+        "event_id": "2013"
+      },
+      {
+        "title": "Sea of Love",
+        "artist": "The National",
+        "event_id": "2013"
+      },
+      {
+        "title": "Shuggie",
+        "artist": "Foxygen",
+        "event_id": "2013"
+      },
+      {
+        "title": "Slip Stitch",
+        "artist": "Silver Dapple",
+        "event_id": "2013"
+      },
+      {
+        "title": "Sometimes (Dr. Hirsch)",
+        "artist": "Yello",
+        "event_id": "2013"
+      },
+      {
+        "title": "Sovay",
+        "artist": "Andrew Bird",
+        "event_id": "2013"
+      },
+      {
+        "title": "Squalor Victoria",
+        "artist": "The National",
+        "event_id": "2013"
+      },
+      {
+        "title": "Stand Or Fall",
+        "artist": "Fixx",
+        "event_id": "2013"
+      },
+      {
+        "title": "Terrible Love",
+        "artist": "The National",
+        "event_id": "2013"
+      },
+      {
+        "title": "This Is the Last Time",
+        "artist": "The National",
+        "event_id": "2013"
+      },
+      {
+        "title": "Trans Siberian Railway Thief",
+        "artist": "Escarlatina Obsessiva",
+        "event_id": "2013"
+      },
+      {
+        "title": "Val Jester",
+        "artist": "The National",
+        "event_id": "2013"
+      },
+      {
+        "title": "Vanderlyle Crybaby Geeks",
+        "artist": "The National",
+        "event_id": "2013"
+      },
+      {
+        "title": "Wave of Mutilation",
+        "artist": "The Pixies",
+        "event_id": "2013"
+      },
+      {
+        "title": "We Are Never Ever Getting Back Together",
+        "artist": "Taylor Swift",
+        "event_id": "2013"
+      },
+      {
+        "title": "We Came to Dance",
+        "artist": "Ultravox",
+        "event_id": "2013"
+      },
+      {
+        "title": "Wind-Up",
+        "artist": "Pity Sex",
+        "event_id": "2013"
+      },
+      {
+        "title": "The World Fell",
+        "artist": "Vår",
+        "event_id": "2013"
+      },
+      {
+        "title": "Worsening",
+        "artist": "Baths",
+        "event_id": "2013"
+      },
+      {
+        "title": "You Know My Name (Look up the Number)",
+        "artist": "The Beatles",
+        "event_id": "2013"
+      },
+      {
+        "title": "You Tear the World in Two",
+        "artist": "Pale Saints",
         "event_id": "2013"
       }
     ]
